@@ -1,0 +1,84 @@
+body{
+	margin:0px;
+	padding:0px;	
+}
+
+#solid{
+	width:100%;
+	height:200px;
+	clear:both;
+
+	position:relative;
+}
+#solid .solid0,#solid .solid1,#solid .solid2,#solid .solid3,#solid .solid4,#solid .solid5,#solid .solid6,#solid .solid7,#solid .solid8{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:200px;
+	display:none;
+}
+#solid .solid0{
+	background: url(../images/banner200_01.jpg) center top no-repeat;
+}
+#solid .solid1{
+	background: url(../images/banner200_02.jpg) center top no-repeat;
+}
+#solid .solid2{
+	background: url(../images/banner200_03.jpg) center top no-repeat;
+}
+#solid .solid3{
+	background: url(../images/banner200_04.jpg) center top no-repeat;
+}
+#solid .solid4{
+	background: url(../images/banner200_05.jpg) center top no-repeat;
+}
+#solid .solid5{
+	background: url(../images/banner200_06.jpg) center top no-repeat;
+}
+#solid .solid6{
+	background: url(../images/banner200_07.jpg) center top no-repeat;
+}
+#solid .solid7{
+	background: url(../images/banner200_08.jpg) center top no-repeat;
+}
+#solid .solid8{
+	background: url(../images/banner200_09.jpg) center top no-repeat;
+}
+#solid ul{
+	margin:0px;
+	padding:0px;
+	list-style:none;	
+}
+#solid ul li{
+	position:absolute;
+	
+	top:0px;
+	width:100%;
+	height:200px;
+	display:none;
+	cursor:pointer;
+}
+#solid #btt{
+	width:100%;
+	height:55px;
+	top:155px;
+	position:relative;
+	
+}
+#solid #btt span{
+	position:absolute;
+	top:15px;
+	left:43%;
+	display:block;
+	width:20px;
+	height:5px;
+
+	text-align:center;
+	background:#3d3d3d;
+	z-index:1000;
+	cursor:pointer;
+	filter:alpha(opacity=70); /*IE婊ら暅锛岄�忔槑搴�50%*/
+	-moz-opacity:0.7; /*Firefox绉佹湁锛岄�忔槑搴�50%*/
+	opacity:0.7;/*鍏朵粬锛岄�忔槑搴�50%*/
+}

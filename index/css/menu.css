@@ -1,0 +1,63 @@
+* { BORDER-LEFT-WIDTH: 0px; font-family:"microsoft Yahei"; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; TEXT-DECORATION: none; MARGIN: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px}
+:focus { }
+A { OUTLINE-WIDTH: medium; OUTLINE-STYLE: none}
+BODY { FONT-SIZE: 12px; FONT-FAMILY: ΢���ź�; OVERFLOW-X: hidden; COLOR: #000000; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px}
+OL, UL, LI, DIV { PADDING: 0px; MARGIN: 0px;}
+LI { LIST-STYLE-TYPE: none; OVERFLOW: hidden}
+H1, H2, H3, H4, H5, H6 { FONT-SIZE: 14px; FONT-WEIGHT: normal}
+#header { margin:auto; WIDTH: 960px}
+/*#header .nav { position:relative; FLOAT: left; MARGIN-TOP: 0px; WIDTH: 980px}
+#header .nav UL .mainlevel { BACKGROUND: url(../images/nav-fgf-bg.png) no-repeat 0px 0px; FLOAT: left; PADDING-LEFT: 2px; LINE-HEIGHT: 33px; margin-top:10px;}
+* HTML .nav UL .mainlevel { BACKGROUND: 0px 0px; POSITION: relative}
+#header .nav UL { DISPLAY: table}
+#header .nav UL LI .nav-a { FONT-SIZE: 13px; HEIGHT: 33px; BACKGROUND: url(../images/nav-repeat2-bg.png) repeat-x 0px 0px; COLOR: #ffffff; PADDING: 0px 34px; TEXT-DECORATION: none; DISPLAY: inline-block; LINE-HEIGHT: 33px;}
+#header .nav UL LI .nav-a:hover { HEIGHT: 33px; BACKGROUND: url(../images/nav-repeat-bg.png) repeat-x 0px 0px; COLOR: #ffffff; PADDING: 0px 34px; LINE-HEIGHT: 33px;}
+#header .nav UL LI.first-crl { BACKGROUND: 0px 0px}
+#header .nav UL LI.first-crl .nav-a { HEIGHT: 38px; BACKGROUND: url(../images/nav-yj-bg2.png) no-repeat left top;}
+#header .nav UL LI.first-crl .nav-a:hover { HEIGHT: 38px; BACKGROUND: url(../images/nav-yj-bg.png) no-repeat left top;}
+#header .nav UL LI.end-crl .nav-a { HEIGHT: 38px; BACKGROUND: url(../images/nav-yj-bg2.png) no-repeat right -41px;}
+#header .nav UL LI.end-crl .nav-a:hover { HEIGHT: 38px; BACKGROUND: url(../images/nav-yj-bg.png) no-repeat right -41px;}
+.mainlevel DIV { POSITION: absolute; PADDING:15px 20px; DISPLAY: none; TOP: 43px; WIDTH: 430px; HEIGHT: 95px; BACKGROUND: url(../images/nav-bg-09.png) 0px 0px;}
+#sub_01 { LEFT: 112px}
+#sub_02 { LEFT: 234px}
+#sub_03 { LEFT: 356px}
+#sub_04 { LEFT: 478px}
+#sub_05 { RIGHT: 260px}
+#sub_06 { RIGHT: 138px}
+#sub_07 { RIGHT: 8px}
+.mainlevel DIV OL { OVERFLOW: hidden; FLOAT: left; DISPLAY: block; WIDTH: 240px;}
+.mainlevel DIV LI { BORDER-BOTTOM: #cccccc 1px dashed; LINE-HEIGHT: 24px; WIDTH: 300px; padding:0px; margin:0px;}
+.mainlevel DIV LI A { HEIGHT: 27px; BACKGROUND: url(../images/nav-li-icon.png) no-repeat left center; COLOR: #3b3b3b; margin:0px; padding:0px; PADDING-LEFT: 6px; DISPLAY: inline-block; LINE-HEIGHT: 24px; WIDTH: 82px}
+.mainlevel DIV LI A:hover { COLOR: #ce9405; font-weight:bold;}
+.mainlevel DIV .nav-img { FLOAT: right; DISPLAY: inline-block}
+.mainlevel DIV SPAN IMG { BORDER:0px solid #ffffff; margin-top:4px; width:162px; height:84px;}
+.mainlevel DIV#sub_03 { WIDTH: 542px;}
+.mainlevel DIV#sub_03 ol { WIDTH: 352px; }
+.mainlevel DIV#sub_03 ol li { WIDTH: 352px; }*/
+
+
+
+/***************** ie6 *****************/
+
+.tmenulist{z-index: 999;  display:inline;float:left; overflow:visible; width:100px; height:55px; position:relative; border:none;}
+.tmenulist a.tmenu_link{display:block; overflow:hidden; background:none; height:55px; width:100px; line-height:55px; margin:0 auto; text-align:center; padding:0px;font-size:15px; border:none; font-family:"microsoft Yahei";color:#000;}
+.tmenulist a.tmenu_link:hover{text-decoration:none; height:55px; width:100px; color:#FFF;background:url(../images/cdtmenu_bg.gif) no-repeat center center !important; font-family:"microsoft Yahei"}
+.endlist {/* text-indent:25px;*/ width:126px;}
+.endlist a.tmenu_link{ width:126px;}
+.endlist a.tmenu_link:hover{ width:126px;}
+.tmenulist ul{ z-index:999;display:none; position:absolute; overflow:hidden; height:120px; width:500px; background: url(../images/nav-bg-09.png) 0px 0px; top:55px !important; right:0px;}
+.tmenulist ul.mul_II {display:none; position:absolute; overflow:hidden; height:120px; width:500px; background: url(../images/nav-bg-09.png) 0px 0px; top:55px !important; left:0px; overflow:auto;}
+.tmenulist ul li{z-index:999; display:block; overflow:hidden; vertical-align:bottom; height:90px; width:460px; margin:15px 0px 0px 20px;}
+.tmenulist ul li div ol { OVERFLOW: hidden; FLOAT: left; text-align:left; DISPLAY:block; WIDTH: 260px; text-indent:0px;}
+.tmenulist ul li div li { BORDER-BOTTOM: 1px #cccccc dashed; HEIGHT: 27px; LINE-HEIGHT: 25px; WIDTH: 260px; padding:0px; margin:0px;}
+.tmenulist ul li div li A { HEIGHT: 27px; LINE-HEIGHT: 25px; WIDTH: 80px; COLOR: #3b3b3b; font-size:12px; font-weight:normal; BACKGROUND: url(../images/nav-li-icon.png) no-repeat left center; margin:0px; padding:0px; PADDING-LEFT: 6px; DISPLAY: inline-block;}
+.tmenulist ul li div li A:hover { COLOR: #aa1500; font-weight:bold; font-size:12px; text-decoration:none;}
+.tmenulist ul li div .nav-img { FLOAT: right; DISPLAY:inline-block;}
+.tmenulist ul li div span img { margin-top:4px; width:162px; height:84px;/* BORDER:1px solid #f00;*/}
+
+.tmenulist ul li div li.mul_li_II { HEIGHT: 21px; LINE-HEIGHT: 20px; WIDTH: 260px; padding:0px; margin:0px;}
+
+/*.tmenulist ul#mul_03{ width:580px;}
+.tmenulist li.mul_li_II { WIDTH: 540px;}
+.tmenulist li.mul_li_II div ol { WIDTH: 350px; }
+.tmenulist li.mul_li_II div ol li { WIDTH: 350px; }*/
