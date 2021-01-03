@@ -61,42 +61,20 @@ function openNews(url){
 //父栏目链接
 function openMenu(url){
     let baseUrl = window.location.href.split('/articles.html')[0];
-    window.open(baseUrl+'/list.html?'+'')
+    window.open(baseUrl+'/list.html?' + url)
 }
 
 //子栏目链接
 function childNews(url){
-	//alert(url);
-	//javascript:childNews('&t=&s=')--子栏目链接
-	var urlStr=url.split("="); 
-	if(urlStr.lenght=4){
-	if(urlStr[1]=="showFirstDoc&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showfirst/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsInYearList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsInYearList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showImgList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showImgList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}
-	}
-	 if(urlStr.lenght=6){
-		if(urlStr[1]=="showFirstDoc&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showfirst_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsInYearList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsInYearList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showImgList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showImgList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	};
-	}
+  let baseUrl = window.location.href.split('/articles.html')[0];
+
+	window.location.href = baseUrl + "/articles.html?" + url;
 }
 
 //左侧导航栏链接
 function menuNews(url){
-    let baseUrl = window.location.href.split('/articles.html')[0];
-    window.open(baseUrl+'/list.html?'+url)
+  let baseUrl = window.location.href.split('/articles.html')[0];
+  window.open(baseUrl+'/list.html?'+url)
 }
 var newwindowIndex=0;
 	function openWin(url){
