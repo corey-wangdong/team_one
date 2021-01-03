@@ -174,6 +174,7 @@ var contentData = [
   {
     title: "aboutDT",
     desc: "关于大唐",
+    listTitle:'gydt_gsjj',
     titleContent:{
       preTitle:'系统',
       lastTitle:'动态'
@@ -192,6 +193,7 @@ var contentData = [
   {
     title: "businessDevelopment",
     desc: "经营发展",
+    listTitle:'jyfz_scjy',
     titleContent:{
       preTitle:'基层',
       lastTitle:'简讯'
@@ -210,6 +212,7 @@ var contentData = [
   {
     title: "newsCenter",
     desc: "新闻中心",
+    listTitle:'news_sjjs',
     titleContent:{
       preTitle:'一线',
       lastTitle:'故事'
@@ -228,6 +231,7 @@ var contentData = [
   {
     title: "InvestorRelations",
     desc: "投资者关系",
+    listTitle:'index_tzzgx',
     titleContent:{
       preTitle:'深度',
       lastTitle:'报道'
@@ -246,6 +250,7 @@ var contentData = [
   {
     title: "socialResponsibility",
     desc: "社会责任",
+    listTitle:'shzr_shzrbg',
     titleContent:{
       preTitle:'媒体',
       lastTitle:'关注'
@@ -264,6 +269,7 @@ var contentData = [
   {
     title: "corporateCulture",
     desc: "企业文化",
+    listTitle:'qywh_qykfr',
     titleContent:{
       preTitle:'幸福',
       lastTitle:'大唐'
