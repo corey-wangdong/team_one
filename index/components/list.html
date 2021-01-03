@@ -383,14 +383,13 @@ div.kjtd_div{display:none;}
 <!--header begin-->
 <div class="ipnews">
 <div class="ipnewsbg">
-    <div class="ipNavL"><h4>新闻中心</h4></div>
     <div class="ipNavM">
     <div class="ipNav">
     <span class="ipNavM01">
     		<font color="#ce040c">时政</font>要闻
     </span>
-    <span class="ipNavM02"><a href="http://www.china-cdt.com:80/dtwz/index.jsp">首页</a> -&gt;
-    		 <a href="http://www.china-cdt.com:80/dtwz//indexAction.ndo?action=showNewsIndexing&t=index_news&s=index_news">新闻中心</a> -&gt;
+    <span class="ipNavM02">
+            <a href="../../index.html">首页</a> -&gt;
     		<h4>时政要闻</h4>
     &nbsp;&nbsp;</span></div>
     </div>
@@ -445,8 +444,13 @@ div.kjtd_div{display:none;}
 </body>
 </html>
 <script>
+    // 改变左边菜单
     var menu =
     [
+        {
+            url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_sjjs',
+            title:'时政要闻'
+        },
         {
             url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_wzqh',
             title:'十九届五中全会'
@@ -465,24 +469,28 @@ div.kjtd_div{display:none;}
         },
     ]
 
-    var menuShow = $('.ipLtree_ul ul')
-    var str =''
-    var getQueryString=window.location.href.split('s=')[1]
-    for(var i = 0; i < menu.length; i++) {
-        var s = menu[i].url.split('s=')[1]
-        if(getQueryString.includes(s)){
-            str += `<li class="liout"  onclick="javascript:menuNews(${menu[i].url})" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a href="#" style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].url}">${menu[i].title}</a></li>`
-        }else{
-            str += `<li class="liout"  onclick="javascript:menuNews(${menu[i].url})" ><a href="#" data_index="${menu[i].url}">${menu[i].title}</a></li>`
+    function renderMenu(menu){
+        var menuShow = $('.ipLtree_ul ul')
+        var str =''
+        var getQueryString=window.location.href.split('s=')[1]
+        for(var i = 0; i < menu.length; i++) {
+            var s = menu[i].url.split('s=')[1]
+            if(getQueryString.includes(s)){
+                str += `<li class="liout"   onclick="javascript:menuNews(${menu[i].url})" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a   style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].url}">${menu[i].title}</a></li>`
+            }else{
+                str += `<li class="liout"  onclick="javascript:menuNews(${menu[i].url})" ><a  data_index="${menu[i].url}">${menu[i].title}</a></li>`
+            }
         }
+        menuShow.html(str)
+        menuShow.click(function (e) {
+            if (e.target.tagName.toLowerCase() == 'a') {
+                menuNews($(e.target).attr('data_index'))
+            }
+        })
     }
-    menuShow.html(str)
-    menuShow.click(function (e) {
-        console.log(e.target.tagName)
-        if (e.target.tagName.toLowerCase() == 'a') {
-            menuNews($(e.target).attr('data_index'))
-        }
-    })
+
+    renderMenu(menu)
+
 
     // 近3年份修改
     var domYear = $('.year')
@@ -499,8 +507,6 @@ div.kjtd_div{display:none;}
     })
 
     // 新闻标题列表
-    var newsListHtml= '';
-    var newsDom = $('.RList');
     const  newsResultList= [{
         url:'d=E3734B0A-DE0E-8E7A-9BEE-1571097E69A5',
         title:'习近平在气候雄心峰会上发表重要讲话',
@@ -519,23 +525,42 @@ div.kjtd_div{display:none;}
         date:'2020-12-16'
     }
     ]
-    for (let i=0;i<newsResultList.length;i++){
-        newsListHtml+= `<li><a dataUrl="${newsResultList[i].url}">${newsResultList[i].title}</a><ul style="text-align:right; color:#999"><li>日期：${newsResultList[i].date}</li></ul></li>`
-    }
-    newsDom.html(newsListHtml)
-    $('.RList li a').click(function (){
-        openNews($(this).attr('dataUrl'))
-    })
-    function GetQueryString(name) {
-        var  reg = new  RegExp( "(^|&)" + name + "=([^&]*)(&|$)" );
-        var  r = window.location.search.substr(1).match(reg);
-        if (r!= null ) return   unescape(r[2]); return  null ;
-    }
+  function renderList(newsResultList) {
+      var newsListHtml= '';
+      var newsDom = $('.RList');
+      for (let i=0;i<newsResultList.length;i++){
+          newsListHtml+= `<li><a dataUrl="${newsResultList[i].url}">${newsResultList[i].title}</a><ul style="text-align:right; color:#999"><li>日期：${newsResultList[i].date}</li></ul></li>`
+      }
+      newsDom.html(newsListHtml)
+      $('.RList li a').click(function (){
+          openNews($(this).attr('dataUrl'))
+      })
+  }
+    renderList(newsResultList);
+
     // 新闻列表分页
     var currentPage =1 ;
     var totalPage =12;
     $('#currentPage').text(currentPage)
     $('#totalPage').text(totalPage)
+
+
+    // 初始化链接
+    var ipNavM01 =$('.ipNavM01')
+    var ipNavM02=$('.ipNavM02 h4')
+    var liout = $('.liout a')
+    liout.each((v)=>{
+        var getQueryString=window.location.href.split('s=')[1]
+        console.log(liout.eq(v).attr('data_index'))
+        var s = liout.eq(v).attr('data_index').split('s=')[1]
+        if(getQueryString.includes(s)){
+            let text = liout.eq(v).text()
+            let  head =text.substring(0,2)
+            let foot =text.substring(2,text.lenght)
+            ipNavM01.html(`<font color="#ce040c">${head}</font>${foot}`)
+            ipNavM02.html(text)
+        }
+    })
 </script>
 
 //onclick="javascript:window.location='http://www.china-cdt.com:80/dtwz//indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_sjjs&y=${years}';"
