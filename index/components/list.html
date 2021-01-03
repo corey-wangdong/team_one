@@ -388,7 +388,7 @@ div.kjtd_div{display:none;}
     var firstMenu = headData.filter((v) => {
         return v.title === fl
     })
-    var menu = firstMenu.childs
+    var menu = firstMenu[0].childs
     function renderMenu(menu){
         var menuShow = $('.ipLtree_ul ul')
         var str =''
@@ -396,9 +396,9 @@ div.kjtd_div{display:none;}
         for(var i = 0; i < menu.length; i++) {
             var s = menu[i].url.split('s=')[1]
             if(getQueryString.includes(s)){
-                str += `<li class="liout"   onclick="javascript:menuNews(${menu[i].secondLevelUrl})" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a   style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].secondLevelUrl}">${menu[i].childDesc}</a></li>`
+                str += `<li class="liout" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a   style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].secondLevelUrl}&fl=${fl}">${menu[i].childDesc}</a></li>`
             }else{
-                str += `<li class="liout"  onclick="javascript:menuNews(${menu[i].secondLevelUrl})" ><a  data_index="${menu[i].secondLevelUrl}">${menu[i].childDesc}</a></li>`
+                str += `<li class="liout"  ><a  data_index="${menu[i].secondLevelUrl}&fl=${fl}">${menu[i].childDesc}</a></li>`
             }
         }
         menuShow.html(str)
