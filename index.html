@@ -35,6 +35,7 @@
 
 <script src="./index/utils/mockData.js"></script>
 <script src="./index/utils/getBoxDataList.js"></script>
+<script src="./index/utils/contantMethods.js"></script>
 <!--屏幕分辨率高度800以下的设置-->
 <link rel="stylesheet" id="sc" type="text/css" href=""/>
 
@@ -113,34 +114,15 @@ console.log('url-----------',url)
 
 	// let baseUrl = window.location.href.split('/articles.html')[0];
     // window.open(baseUrl+'/list.html?'+url)
+
 }
 
 function childNews(url){
-	//alert(url);
-	//javascript:childNews('&t=&s=')--子栏目链接
-	var urlStr=url.split("="); 
-	if(urlStr.lenght=4){
-	if(urlStr[1]=="showFirstDoc&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showfirst/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsInYearList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsInYearList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showImgList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showImgList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}
-	}
-	 if(urlStr.lenght=6){
-		if(urlStr[1]=="showFirstDoc&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showfirst_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsInYearList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsInYearList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showImgList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showImgList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	};
-	}
+
+  
+  let baseUrl = window.location.href.split('/index.html')[0];
+
+	window.location.href = baseUrl+"/index/components/articles.html?"+url;
 	
 }
 
@@ -307,7 +289,6 @@ div.kjtd_div{display:none;}
 
 <!-- top轮播图 背景图方式呈现 -->
 <div class="banner" style="background: url(./index/Image/banner_0205.jpg) center top no-repeat;">
-  <!-- <iframe  scrolling="no" frameborder="0" width="100%" src="./index/components/topBanner.html" ></iframe> -->
   <div id="solid">
     <div class="solid0"></div>
     <div class="solid1"></div>
@@ -399,300 +380,17 @@ div.kjtd_div{display:none;}
   	</div>
 <!--公示公告-->   
   <div class="NtcBox"    style="height:0px;">
-
 	</div>
 	<div id='contentShow'></div>
-	<div class="xcfc">
-		<!--现场风采 内容-->
-		<div class="xcfc01">
-			<div class="tlt_2"><a href="http://www.china-cdt.com:80/dtwz/showImgList/index_news&s=news_tpxw.html" target="_blank"><font color="#c10000">现场</font><font color="#000">风采</font></a></div>
-		<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showImgList/index_news&s=news_tpxw.html" target="_blank">更多 &gt;</a></div>
-		</div>
-		<div class="xcfc_sliderDiv">
-		<ul class="xcfc_bxslider">
-		
-		
-		
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=E25DEB57-ECB6-9802-072E-DDC43EDD5480" target="_blank">
-				<img src="./index/Image/202012311123591242071786.png"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=E25DEB57-ECB6-9802-072E-DDC43EDD5480" target="_blank">【职工随手拍】中南院：遇“健”</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=32F08AB5-946E-498C-EF1C-119FC5D43BAF" target="_blank">
-				<img src="./index/Image/20201231105451290919686.png"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=32F08AB5-946E-498C-EF1C-119FC5D43BAF" target="_blank">【职工随手拍】神头发电公司：决</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=ECFD982B-7D42-D738-492D-372292445D38" target="_blank">
-				<img src="./index/Image/20201230080206-1861011653.png"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=ECFD982B-7D42-D738-492D-372292445D38" target="_blank">【职工随手拍】滨州发电公司：全</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=282FB5B1-CBDA-F2B6-0C36-B065DEF981F5" target="_blank">
-				<img src="./index/Image/20201228133041-325883950.jpg"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=282FB5B1-CBDA-F2B6-0C36-B065DEF981F5" target="_blank">【职工随手拍】耒阳发电公司：退</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=784551C1-BDE9-6965-0BB7-AA1337BE4612" target="_blank">
-				<img src="./index/Image/20201228081316-1833455328.png"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=784551C1-BDE9-6965-0BB7-AA1337BE4612" target="_blank">【职工随手拍】内蒙古分公司：迎</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=5BF338CE-A913-DDBF-8AC4-B4A4699D3B34" target="_blank">
-				<img src="./index/Image/202012231345151448423769.jpg"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=5BF338CE-A913-DDBF-8AC4-B4A4699D3B34" target="_blank">【职工随手拍】托克托发电公司：</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=D24FCFC0-1FBC-E216-D90E-70D39E302FF1" target="_blank">
-				<img src="./index/Image/20201222152459-993324097.jpg"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=D24FCFC0-1FBC-E216-D90E-70D39E302FF1" target="_blank">【职工随手拍】集团公司：举办“</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=28908D6F-2A1C-0B83-CDAE-9D91F843C7B1" target="_blank">
-				<img src="./index/Image/202012181058441053159924.JPG"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=28908D6F-2A1C-0B83-CDAE-9D91F843C7B1" target="_blank">【职工随手拍】华东院：青春力量</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=CFBC3C5A-F746-E64D-B622-029989A53CF0" target="_blank">
-				<img src="./index/Image/202012171335472017414559.jpg"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=CFBC3C5A-F746-E64D-B622-029989A53CF0" target="_blank">【职工随手拍】龙滩水电厂：召开</a>
-			</div>
-			</li>
-		
-	
-	
-		
-		
-		
-			<li>
-			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=90F0E18B-E885-C00B-B309-3420AE55BE70" target="_blank">
-				<img src="./index/Image/202012151340451676755947.JPG"/>      			
-			</a>
-			<div class="fcZi">
-				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=90F0E18B-E885-C00B-B309-3420AE55BE70" target="_blank">【职工随手拍】郓城发电公司：深</a>
-			</div>
-			</li>
-		
-		</ul>
-</div>
-	</div>
 </div>
 </div>
-<br />
-<div style="height:45px;background-color:#ae0002;">
-    <div style="width:966px;margin:auto;line-height:45px;color:#fff;font-size:14px;">
-        友情链接：
-        <select class="friendlink_select">
-              <option value ="">成员链接</option>
-              <option value="http://www.dtpower.com/" target="_blank">大唐国际发电股份有限公司</option>
-              <option value="http://www.hypower.com.cn/" target="_blank">大唐华银电力股份有限公司（中国大唐集团公司湖南分公司）</option>
-              <option value="http://www.cdt-gxi.com" target="_blank">广西桂冠电力股份有限公司（中国大唐集团公司广西分公司、龙滩水电开发有限公司）</option>
-              <option value="http://www.cdt-re.com/" target="_blank">中国大唐集团新能源股份有限公司</option>
-			  <option value="http://www.dteg.com.cn/" target="_blank">大唐环境产业集团有限公司 </option>
-              <option value="http://www.cdt-shx.com/" target="_blank">大唐山西分公司</option>
-              <option value="http://www.cdt-jl.com/" target="_blank">大唐吉林发电有限公司</option>
-              <option value="http://www.cdt-hlj.com/" target="_blank">大唐黑龙江发电有限公司</option>
-              <option value="http://www.cdt-js.com" target="_blank">大唐江苏发电有限公司</option>
-              <option value="http://www.cdt-ah.com/" target="_blank">大唐安徽发电有限公司</option>
-              <option value="http://www.cdt-sd.com" target="_blank">大唐山东发电有限公司</option>
-              <option value="http://www.henan-cdt.com/" target="_blank">大唐河南发电有限公司</option>
-              <option value="http://www.cdt-sc.com/" target="_blank">大唐四川发电有限公司</option>
-	          <option value="http://www.cdt-gz.com" target="_blank">大唐贵州发电有限公司</option>
-              <option value="http://www.cdt-yn.com" target="_blank">大唐云南发电有限公司</option>
-              <option value="http://www.cdt-sx.com/front/mainAction.action" target="_blank">大唐陕西发电有限公司</option>
-              <option value="http://www.cdt-gsu.com/" target="_blank">大唐甘肃发电有限公司</option>
-              <option value="http://www.cdt-xj.com/" target="_blank">大唐新疆发电有限公司</option>
-			  <option value="http://www.cdt-zj.com:81" target="_blank">大唐浙江分公司</option>
-              <option value="http://www.china-cdto.com/hwtz_site_HTML/index.html?tdsourcetag=s_pcqq_aiomsg" target="_blank">中国大唐集团海外投资有限公司</option>
-              <option value="http://www.cdt-wz.com/" target="_blank">中国水利电力物资有限公司</option>
-              <option value="http://www.cdt-rl.com/" target="_blank">大唐电力燃料有限公司</option>
-              <option value="http://www.cdt-cw.com/" target="_blank">中国大唐集团财务有限公司</option>
-              <option value="http://www.cdt-my.com/" target="_blank">中国大唐集团煤业有限责任公司</option>
-              
-              <option value="http://www.cdt-eri.com/" target="_blank">中国大唐技术经济研究院</option>
-  	          <option value="http://www.cdt-kxjs.com/" target="_blank">中国大唐集团科学技术研究院</option>
-              <option value="http://www.cdt-reri.com" target="_blank">中国大唐集团新能源科学技术研究院有限公司</option>
-  			  <option value="http://www.cdt-zbkg.com" target="_blank">中国大唐资本控股有限公司</option>
-  			  <option value="http://www.cdt-sh.com/" target="_blank">中国大唐集团海洋能源产业有限公司</option>
-        </select>
-        
-        <select class="friendlink_select">
-              <option value ="">相关链接</option>
-              <option value="http://www.gov.cn/" target="_blank">中国政府门户网</option>
-              <option value="http://www.ccdi.gov.cn/" target="_blank">中央纪委国家监委网站</option>
-              <option value="http://www.sasac.gov.cn/" target="_blank">国务院国有资产监督管理委员会</option>
-              <option value="http://www.ndrc.gov.cn/" target="_blank">中华人民共和国国家发展和改革委员会</option>
-              <option value="http://www.audit.gov.cn/" target="_blank">中华人民共和国审计署</option>
-              <option value="http://www.nea.gov.cn/" target="_blank">国家能源局</option>
-              <option value="http://www.cec.org.cn/" target="_blank">中国电力企业联合会</option>
-              <option value="http://www.sgcc.com.cn/" target="_blank">国家电网有限公司</option>
-              <option value="http://www.csg.cn/" target="_blank">中国南方电网有限责任公司</option>
-              <option value="http://www.chng.com.cn/" target="_blank">中国华能集团有限公司</option>
-              <option value="http://www.chd.com.cn/" target="_blank">中国华电集团有限公司</option>
-              <option value="http://www.ceic.com/" target="_blank">国家能源投资集团有限责任公司</option>
-              <option value="http://www.spic.com.cn/" target="_blank">国家电力投资集团有限公司</option>
-              <option value="http://www.cnooc.com.cn" target="_blank">中国海洋石油集团有限公司</option>
-              <option value="http://www.powerchina.cn/" target="_blank">中国电力建设集团有限公司</option> 
-              <option value="http://www.ceec.net.cn/" target="_blank">中国能源建设集团有限公司</option>	
-              <option value="http://www.dongfang.com/" target="_blank">中国东方电气集团有限公司</option>
-              <option value="http://www.harbin-electric.com/" target="_blank">哈尔滨电气集团有限公司</option>
-              <option value="https://www.shanghai-electric.com/group/" target="_blank">上海电气集团股份有限公司</option> 
-              <option value="http://www.cntv.cn/index.shtml" target="_blank">央视网</option>
-              <option value="http://www.brtn.cn/" target="_blank">北京网络广播电视台</option>
-              <option value="http://www3.xinhuanet.com/" target="_blank">新华网</option>
-              <option value="http://www.people.com.cn/" target="_blank">人民网</option>
-              <option value="http://www.wenming.cn/" target="_blank">中国文明网</option>
-              <option value="http://soe.qnzs.youth.cn/wsgqt/index/" target="_blank">网上共青团-央企</option>
-              <option value="http://www.cpnn.com.cn/" target="_blank">中国电力新闻网</option>
-              <option value="http://www.chinapower.com.cn/" target="_blank">中国电力网</option>
-              <option value="http://www.ctg.com.cn/" target="_blank">中国长江三峡集团有限公司</option>
-        </select>
-        
-        <select class="friendlink_select">
-              <option value ="">服务链接</option>
-              <option value="http://www.weather.com.cn/static/html/weather.shtml" target="_blank">问天网（天气预报）</option>
-              <option value="http://www.elong.com/" target="_blank">e龙网（酒店及航班信息）</option>
-              <option value="http://www.airchina.com.cn/index.shtml" target="_blank">中国国际航空公司</option>
-              <option value="http://www.12306.cn/mormhweb/" target="_blank">中国铁路客户服务中心</option>
-              <option value="http://www.boc.cn/cn/common/whpj.html" target="_blank">中国银行（汇率）</option>
-              <option value="http://www.cnstock.com/" target="_blank">中国证券网</option>
-              <option value="http://www.tvsou.com/" target="_blank">搜视网（电视节目）</option>
-              <option value="http://www.mtime.com/showtime/" target="_blank">时光网（北京影讯）</option>
-        </select>
-    </div>
 </div>
 <script type="text/javascript">
 	var centerImageArray = [];
 </script>
 <script>
 
-var topHead = $('.tmenubg')
-  console.log("topHead----", topHead)
-  console.log('headData---', headData);
-  
-  function createdDom(data, flag) {
-    var templateDom = '';
-    if(!data){
-      return;
-    }
-    if(flag == 'head') {
-      for(var i = 0; i < data.length; i++) {
-        templateDom += '<div class="tmenulist"><a href="' + data[i].firstLevelUrl + '" class="tmenu_link">' + data[i].desc +'</a>';
-
-        if (data[i].childs.length > 0) {
-          var count = 1
-          templateDom += '<ul class="mul_II"><li><div><OL>'
-
-          for(var j = 0; j < data[i].childs.length; j++) {
-            if (count > 3 || count == 1) {
-              templateDom += '<LI>'
-            }
-
-            templateDom += '<A href="javascript:childNews(' + "'" + data[i].childs[j].secondLevelUrl + "'" + ')">' + data[i].childs[j].childDesc + '</A>'
-
-            count++;
-
-            if (count > 3 || j == data[i].childs.length - 1) {
-              templateDom += '</LI>'
-              count = 1
-            }
-          }
-
-          templateDom += '</OL><span class=nav-img>';
-          templateDom += '<IMG src="' + data[i].imgUrl + '"/></span>'
-          templateDom += ' </div></li></ul>'
-        }
-
-
-        templateDom += '</div>'
-
-        
-      }
-    }
-  
-    return templateDom
-  }
+  var topHead = $('.tmenubg')
 
   var currentHeadDom = createdDom(headData, 'head')
   topHead.html(currentHeadDom);
@@ -738,6 +436,7 @@ var topHead = $('.tmenubg')
 			},function(){ 
 				myIntFlag = jjgzInterval();
 			});
+	
 		function scrollCenterImages(){
 			var indexBGImg_Photos_index = 0;
 			if(centerImageArray.length>1){
