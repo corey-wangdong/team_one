@@ -6,7 +6,7 @@ function createdDom(data, flag) {
   if(flag == 'head') {
     for(var i = 0; i < data.length; i++) {
       if(data[i].title == 'homePage') {
-        templateDom += '<div class="tmenulist"><a href="' + data[i].firstLevelUrl + '" class="tmenu_link">' + data[i].desc +'</a>';
+        templateDom += '<div class="tmenulist"><a href="javascript:redirectHomePage()" class="tmenu_link">' + data[i].desc +'</a>';
       }else {
         templateDom += '<div class="tmenulist"><a href="javascript:openMenu(' + "'" + data[i].firstLevelUrl + "'" + ')" class="tmenu_link">' + data[i].desc + '</a>'
       }
