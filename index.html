@@ -73,6 +73,11 @@ function closeXb_div(){
 	$("#xb_div").fadeOut(1000);
 }
 
+function redirectHomePage(){
+    let baseUrl = window.location.href.split('/index.html')[0];
+    window.location.href = baseUrl+"/index.html";
+  }
+
 function setlanAd(url,imgSrc){
 	var lan_ad = document.getElementById("lan_ad");
 	if(lan_ad)lan_ad.innerHTML = '<a href="'+url+'"><img src="./index/Image/yuantu_'+imgSrc+'" width="916" height="76" /></a>';
