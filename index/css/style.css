@@ -286,7 +286,7 @@ a,img { border:none;}
 .ipLtree_2ul li a:hover {color:#ca1c00; font-size:14px; font-weight:bold;}
 
 /* 内页 右侧区域 */
-.ipRlist { width:920px; float:right; text-align:left; display:inline; margin:10px 0px 0px 0px;/* border:1px solid #f00;*/}
+.ipRlist { width:920px; float:right; text-align:left; display:inline; margin:10px 0px 0px 0px;min-height: 500px}
 
 /* 内页 序列页 */
 .ipRtbl_lan { position:relative; width:765px; height:auto; margin:0px 0px 10px 80px;}
