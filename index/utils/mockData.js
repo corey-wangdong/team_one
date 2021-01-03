@@ -13,7 +13,7 @@ var headData = [
   {
     title: "aboutDT",
     desc: "关于大唐",
-    firstLevelUrl: "action=showFirstDoc&t=index_gydt",
+    firstLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_gsjj",
     imgUrl: './index/images/nav-img-01.jpg',
     childs: [
       {
@@ -56,7 +56,7 @@ var headData = [
   {
     title: "businessDevelopment",
     desc: "经营发展",
-    firstLevelUrl: "action=showFirstDoc&t=index_jyfz&s=jyfz_cybk&t=index_jyfz",
+    firstLevelUrl: "action=showFirstDoc&s=jyfz_cybk&t=index_jyfz&t=index_jyfz&s=jyfz_scjy",
     imgUrl: './index/images/nav-img-02.jpg',
     childs: [
       {
@@ -74,7 +74,7 @@ var headData = [
   {
     title: "newsCenter",
     desc: "新闻中心",
-    firstLevelUrl: "action=showNewsIndexing&t=index_news",
+    firstLevelUrl: "action=showNewsInYearList&t=index_news&s=news_sjjs",
     imgUrl: './index/images/nav-img-03.jpg',
     childs: [
       {
@@ -85,14 +85,14 @@ var headData = [
       {
         childTitle: "stateOwnedAssetsNews",
         childDesc: "国资动态",
-        secondLevelUrl: "/indeaction=showNewsInYearList&t=index_news&s=news_jjgzxAction.ndo?action=showFirstDoc&s=cwbg_zc&t=index_jyfz&t=index_jyfz&s=jyfz_cwbg",
+        secondLevelUrl: "action=showFirstDoc&s=cwbg_zc&t=index_jyfz&t=index_jyfz&s=jyfz_cwbg",
       }
     ]
   },
   {
     title: "socialResponsibility",
     desc: "社会责任",
-    firstLevelUrl: "action=showNewsList&t=index_shzr&s=shzr_shzrbg&t=index_shzr",
+    firstLevelUrl: "action=showNewsList&t=index_shzr&s=shzr_shzrbg",
     imgUrl: './index/images/nav-img-04.jpg',
     childs: [
       {
@@ -105,7 +105,7 @@ var headData = [
   {
     title: "corporateCulture",
     desc: "企业文化",
-    firstLevelUrl: "action=showNewsIndexing&t=index_qywh",
+    firstLevelUrl: "action=showNewsInYearList&t=index_qywh&s=qywh_qykfr",
     imgUrl: './index/images/nav-img-05.jpg',
     childs: [
       {

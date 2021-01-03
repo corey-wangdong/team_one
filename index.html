@@ -78,15 +78,13 @@ function setlanAd(url,imgSrc){
 	if(lan_ad)lan_ad.innerHTML = '<a href="'+url+'"><img src="./index/Image/yuantu_'+imgSrc+'" width="916" height="76" /></a>';
 }
 function openNews(url){
-	console.log('url--------',url,window.location.href)
-	//window.open("http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&"+url+"&"+Math.random());
-	var urlStr=url.split("="); 
-
 	let baseUrl = window.location.href.split('/index.html')[0];
-
-	
-	// window.open(baseUrl+"/index/components/articles.html?"+url);
 	window.location.href = baseUrl+"/index/components/articles.html?"+url;
+}
+
+function openMenu(url){
+	let baseUrl = window.location.href.split('/index.html')[0];
+  window.location.href = baseUrl+"/index/components/list.html?"+url;
 }
 
 function childNews(url){
