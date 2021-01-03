@@ -71,6 +71,10 @@ function childNews(url){
 	window.location.href = baseUrl + "/articles.html?" + url;
 }
 
+function redirectHomePage(){
+  let baseUrl = window.location.href.split('/index/components/articles.html')[0];
+  window.location.href = baseUrl+"/index.html";
+}
 //左侧导航栏链接
 function menuNews(url){
   let baseUrl = window.location.href.split('/articles.html')[0];

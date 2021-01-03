@@ -70,6 +70,11 @@ function childNews(url){
 
 	window.location.href = baseUrl + "/articles.html?" + url;
 }
+
+  function redirectHomePage(){
+    let baseUrl = window.location.href.split('/index/components/list.html')[0];
+    window.location.href = baseUrl+"/index.html";
+  }
 //父栏目链接
 function openMenu(url){
 	let baseUrl = window.location.href.split('/list.html')[0];
