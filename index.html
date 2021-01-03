@@ -33,6 +33,7 @@
 
 <script language=javascript type="text/javascript" src="./index/js/layer.js"></script>
 <script src="./index/utils/mockData.js"></script>
+<script src="./index/utils/contantMethods.js"></script>
 <!--屏幕分辨率高度800以下的设置-->
 <link rel="stylesheet" id="sc" type="text/css" href=""/>
 
@@ -111,34 +112,15 @@ console.log('url-----------',url)
 
 	// let baseUrl = window.location.href.split('/articles.html')[0];
     // window.open(baseUrl+'/list.html?'+url)
+
 }
 
 function childNews(url){
-	//alert(url);
-	//javascript:childNews('&t=&s=')--子栏目链接
-	var urlStr=url.split("="); 
-	if(urlStr.lenght=4){
-	if(urlStr[1]=="showFirstDoc&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showfirst/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsInYearList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsInYearList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showImgList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showImgList/"+urlStr[2]+"="+urlStr[3]+".html");
-	}
-	}
-	 if(urlStr.lenght=6){
-		if(urlStr[1]=="showFirstDoc&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showfirst_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsInYearList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsInYearList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showNewsList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showImgList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showImgList_leve3/"+urlStr[2]+"="+urlStr[3]+".html");
-	};
-	}
+
+  
+  let baseUrl = window.location.href.split('/index.html')[0];
+
+	window.location.href = baseUrl+"/index/components/articles.html?"+url;
 	
 }
 
@@ -305,7 +287,6 @@ div.kjtd_div{display:none;}
 
 <!-- top轮播图 背景图方式呈现 -->
 <div class="banner" style="background: url(./index/Image/banner_0205.jpg) center top no-repeat;">
-  <!-- <iframe  scrolling="no" frameborder="0" width="100%" src="./index/components/topBanner.html" ></iframe> -->
   <div id="solid">
     <div class="solid0"></div>
     <div class="solid1"></div>
@@ -455,52 +436,7 @@ div.kjtd_div{display:none;}
 </script>
 <script>
 
-var topHead = $('.tmenubg')
-  console.log("topHead----", topHead)
-  console.log('headData---', headData);
-  
-  function createdDom(data, flag) {
-    var templateDom = '';
-    if(!data){
-      return;
-    }
-    if(flag == 'head') {
-      for(var i = 0; i < data.length; i++) {
-        templateDom += '<div class="tmenulist"><a href="' + data[i].firstLevelUrl + '" class="tmenu_link">' + data[i].desc +'</a>';
-
-        if (data[i].childs.length > 0) {
-          var count = 1
-          templateDom += '<ul class="mul_II"><li><div><OL>'
-
-          for(var j = 0; j < data[i].childs.length; j++) {
-            if (count > 3 || count == 1) {
-              templateDom += '<LI>'
-            }
-
-            templateDom += '<A href="javascript:childNews(' + "'" + data[i].childs[j].secondLevelUrl + "'" + ')">' + data[i].childs[j].childDesc + '</A>'
-
-            count++;
-
-            if (count > 3 || j == data[i].childs.length - 1) {
-              templateDom += '</LI>'
-              count = 1
-            }
-          }
-
-          templateDom += '</OL><span class=nav-img>';
-          templateDom += '<IMG src="' + data[i].imgUrl + '"/></span>'
-          templateDom += ' </div></li></ul>'
-        }
-
-
-        templateDom += '</div>'
-
-        
-      }
-    }
-  
-    return templateDom
-  }
+  var topHead = $('.tmenubg')
 
   var currentHeadDom = createdDom(headData, 'head')
   topHead.html(currentHeadDom);
@@ -546,26 +482,7 @@ var topHead = $('.tmenubg')
 			},function(){ 
 				myIntFlag = jjgzInterval();
 			});
-		/*
-		var centerImg1 = './index/Image/yuantu_20150605145133-1391236196.jpg';
-    	var centerImg2 = './index/Image/yuantu_20150205223006-1786289231.jpg';
-    	var centerUrl = $('#lan_ad a').attr("href");
-    	var centerFlag = true;
-			function showcenter(){
-				if(centerFlag){
-					$('#lan_ad a').attr("href","http://www.china-cdt.com/dtwz//indexAction.ndo?action=showzhuanti&mark=zhuanti_syss");
-					$('#lan_ad a').attr("target","_blank");
-					$('#lan_ad a img').attr("src",centerImg1);
-					centerFlag = false;
-				}else{
-					//$('#lan_ad a').attr("href",centerUrl);
-					$('#lan_ad a').attr("href","http://www.china-cdt.com/dtwz//indexAction.ndo?action=showzhuanti&mark=zhuanti_lzys");
-					$('#lan_ad a').attr("target","_blank");
-					$('#lan_ad a img').attr("src",centerImg2);
-					centerFlag = true;
-				}
-			}
-		*/
+	
 		function scrollCenterImages(){
 			var indexBGImg_Photos_index = 0;
 			if(centerImageArray.length>1){
