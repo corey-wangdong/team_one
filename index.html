@@ -87,25 +87,30 @@ function openNews(url){
 	let baseUrl = window.location.href.split('/index.html')[0];
 
 	
-	window.open(baseUrl+"/index/components/articles.html?"+url);
+	// window.open(baseUrl+"/index/components/articles.html?"+url);
+	window.location.href = baseUrl+"/index/components/articles.html?"+url;
 }
 
 function openMenu(url){
+console.log('url-----------',url)
 	//window.open("http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&"+url+"&"+Math.random());
-	var urlStr=url.split("="); 
-	if(urlStr[1]=="showFirstDoc&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/showfirstDoc/"+urlStr[2]+".html");
-	}else if(urlStr[1]=="showNewsInYearList&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/NewsYear/"+urlStr[2]+".html");
-	}else if(urlStr[1]=="showNewsList&t"&&urlStr[2].indexOf("&s")>-1){
-		window.open("http://www.china-cdt.com:80/dtwz/NewsListt/"+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsList&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/NewsLists/"+"&s="+urlStr[2]+"="+urlStr[3]+".html");
-	}else if(urlStr[1]=="showNewsIndexing&t"){
-		window.open("http://www.china-cdt.com:80/dtwz/shownewsIndexing/"+urlStr[2]+".html");
-	}else if(urlStr[1]=="showFirstDoc&s"){
-		window.open("http://www.china-cdt.com:80/dtwz/showfirstDoc/"+urlStr[3]+".html");
-	}
+	// var urlStr=url.split("="); 
+	// if(urlStr[1]=="showFirstDoc&t"){
+	// 	window.open("http://www.china-cdt.com:80/dtwz/showfirstDoc/"+urlStr[2]+".html");
+	// }else if(urlStr[1]=="showNewsInYearList&t"){
+	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsYear/"+urlStr[2]+".html");
+	// }else if(urlStr[1]=="showNewsList&t"&&urlStr[2].indexOf("&s")>-1){
+	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsListt/"+urlStr[2]+"="+urlStr[3]+".html");
+	// }else if(urlStr[1]=="showNewsList&s"){
+	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsLists/"+"&s="+urlStr[2]+"="+urlStr[3]+".html");
+	// }else if(urlStr[1]=="showNewsIndexing&t"){
+	// 	window.open("http://www.china-cdt.com:80/dtwz/shownewsIndexing/"+urlStr[2]+".html");
+	// }else if(urlStr[1]=="showFirstDoc&s"){
+	// 	window.open("http://www.china-cdt.com:80/dtwz/showfirstDoc/"+urlStr[3]+".html");
+	// }
+
+	// let baseUrl = window.location.href.split('/articles.html')[0];
+    // window.open(baseUrl+'/list.html?'+url)
 }
 
 function childNews(url){
@@ -474,172 +479,16 @@ div.kjtd_div{display:none;}
 		<script type="text/javascript" src="./index/js/jquery.yx_rotaion.js"></script>
 		<script type="text/javascript">$(".yx-rotaion").yx_rotaion({auto:true});</script></div>
         <div class="jtNews">
-        	
-        	
-        	
-        	
-        	
-        	
-        	  		
-        	  		
-    	  			
-    	  			
-    	  			
-    	  			
-    	  			
-    	  			
-    	  			<!---->
-    	  			
-    	  			
-    	  				
-    	  	  	  	
-    	  	  	  	
-    	  	  	   	
+    	  			<!---->  	
         	<h1><a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');">邹磊率队拜访国家能源局局长章建华</a></h1>
             <h2>12月29日，集团公司党组书记、董事长邹磊率队拜访国家能源局党组书记、局长章建华，双方就深化落实能源安全新战略，全力保障国家能源安全，推动能源绿色低碳转型发展进行深入交流……<a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');" class="detailLink">[详情]</a>
-    	  				</h2>
-    	  				
-    	  					
-    	  				
-    	  				
+    	  				</h2>	
     	
         	<ul style="margin-top: 10px;">
-            	
-        	  	
-        	  		
-        	  	
-        	  		
-        	  	
-        	  		
-        	  			
-        	  			
-        	  			
-        	  			
         	  			<li>
-        	  				
-        	  				
         	  	  	  	    <a href="javascript:openNews('t=&d=BA913255-A25A-BFC5-F676-BF7165D6D7CE');">集团公司党组传达学习贯彻中央经济工作会议精神</a>
-        	  	  	  	  	
-        	  	  	  	  	
         	  			</li>
-        	  		
-        	  	
-        	  		
-        	  	
-        	  		
         	  			
-        	  			
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  				
-        	  	  	  	    <a href="javascript:openNews('t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C');">集团公司传达学习贯彻中央企业负责人会议精神</a>
-        	  	  	  	  	
-        	  	  	  	  	
-        	  			</li>
-        	  		
-        	  	
-        	  		
-        	  	
-        	  		
-        	  			
-        	  			
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  				
-        	  	  	  	    <a href="javascript:openNews('t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426');">国务院国资委副主任袁野到中国大唐调研指导冬季保暖保供工作</a>
-        	  	  	  	  	
-        	  	  	  	  	
-        	  			</li>
-        	  		
-        	  	
-        	  		
-        	  	
-        	  		
-        	  			
-        	  			
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  				
-        	  	  	  	    <a href="javascript:openNews('t=&d=59745A3D-9744-0257-B277-0BD4976A2683');">集团公司召开党组会议专题研究全面从严治党工作</a>
-        	  	  	  	  	
-        	  	  	  	  	
-        	  			</li>
-        	  		
-        	  	
-        	  		
-        	  	
-        	  		
-        	  			
-        	  			
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  				
-        	  	  	  	    <a href="javascript:openNews('t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4');">集团公司召开老领导老同志座谈会</a>
-        	  	  	  	  	
-        	  	  	  	  	
-        	  			</li>
-        	  		
-        	  	
-        	  		
-        	  	
-        	  		
-        	  			
-        	  			
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  				
-        	  	  	  	    <a href="javascript:openNews('t=&d=0F317F5B-6C92-92C1-2BE3-5F4A73EF0437');">集团公司召开疫情防控工作领导小组会议</a>
-        	  	  	  	  	
-        	  	  	  	  	
-        	  			</li>
-        	  		
-        	  	
-        	  		
-        	  	
-        	  		
-        	  			
-        	  			
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  				
-        	  	  	  	    <a href="javascript:openNews('t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A');">邹磊会见中交集团党委书记、董事长、总经理王彤宙</a>
-        	  	  	  	  	
-        	  	  	  	  	
-        	  			</li>
-        	  		
-        	  	
-        	  		
-        	  	
-        	  		
-        	  			
-        	  			
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  				
-        	  	  	  	    <a href="javascript:openNews('t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA');">集团公司召开冬季保暖和安全保电工作视频会</a>
-        	  	  	  	  	
-        	  	  	  	  	
-        	  			</li>
-        	  		
-        	  	
-        	  		
-        	  	
-        	  
-        	  
             </ul>
         </div>
   	</div>
@@ -649,234 +498,26 @@ div.kjtd_div{display:none;}
     </div>
 <!--系统动态  基层简讯  一线故事-->    
 	<div class="Box1">
-    	<div class="Box3">
+    	<div class="Box3" id="xtdt">
     		<div class="tltBox">
-        		<div class="tlt_1"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_xtdt.html" target="blank"><font color="#c10000">系统</font><font color="#000">动态</font></a></div>
-            	<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_xtdt.html" target="blank">更多 &gt;</a></div>
+        		<div class="tlt_1"><a href="./index/components/list.html?s=index_gydt" target="blank"><font color="#c10000">系统</font><font color="#000">动态</font></a></div>
+            	<div class="more"><a href="./index/components/list.html?s=index_gydt" target="blank">更多 &gt;</a></div>
     		</div>
-            <ul>
-              
-        	  
-        	  
-        	   
-        	  
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=AFA02F4A-AAEE-6AE7-DD45-FE0AD7D4D8CF');">黑龙江公司：打造民生“暖屋子”</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=DF8C8F04-E618-97BE-973A-B0E3BF05CAC2');">江苏公司：以考促学提升素质能力</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=CABDF84A-91A8-4E96-A6BE-84CD4C8190EA');">浙江分公司：全力应对寒潮保障电力热力供应</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=11DBC38F-BC7A-B20D-A519-162E5325C7A4');">大唐国际：全力保障电力热力平稳有序供应</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=24F90CC1-CDCF-B659-8EE1-AA0F753882C5');">广西分公司：首个光伏项目首批正式并网发电</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=63F74B98-4AE0-57E0-CD1B-6B3DD88473B7');">山东公司：圆满完成全年风电项目建设目标任务</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  
-        	  
-            </ul>
+            <ul></ul>
         </div>
-    	<div class="Box3">
+    	<div class="Box3" id='jcjx'>
     		<div class="tltBox">
-        		<div class="tlt_1"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_jcjx.html" target="blank"><font color="#c10000">基层</font><font color="#000">简讯</font></a></div>
-            	<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_jcjx.html" target="blank">更多 &gt;</a></div>
+        		<div class="tlt_1"><a href="./index/components/list.html?s=news_jcjx" target="blank"><font color="#c10000">基层</font><font color="#000">简讯</font></a></div>
+            	<div class="more"><a href="./index/components/list.html?s=news_jcjx" target="blank">更多 &gt;</a></div>
     		</div>
-            <ul>
-              
-        	  
-        	  
-        	   
-        	  
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=26CDA4D7-EE64-6E57-8373-9BF5AF3EE652');">张家口热电公司优质大唐热应对极寒天</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=1EE40DCB-381D-D2AA-5CC9-0037823239D6');">桂冠山东分公司：全面启动防寒潮保发电模式</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=B6E4E488-B7A8-0F5C-A799-1F8209D3198C');">金坛公司： 以“动”治“冻”　保障能源供应稳定</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=CA9F1B96-C773-E3EB-5AD0-3CAA5B4395EE');">滨海海上风电公司：积极应对寒潮冰雪天气</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=86E734F1-434D-9FE3-E18E-69004EB3ADD4');">吕四港发电公司：提前完成年度电量计划</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=D9168AE4-A34A-C8ED-0658-23CC5145C306');">阳城发电公司：成功签约市场电量</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  
-        	  
-            </ul>
+            <ul></ul>
         </div>
-    	<div class="Box3" style="margin:0;">
+    	<div class="Box3" id='yxgs' style="margin:0;">
     		<div class="tltBox">
-        		<div class="tlt_1"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_dtwt.html" target="blank"><font color="#c10000">一线</font><font color="#000">故事</font></a></div>
-            	<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_dtwt.html" target="blank">更多 &gt;</a></div>
+        		<div class="tlt_1"><a href="./index/components/list.html?s=news_dtwt" target="blank"><font color="#c10000">一线</font><font color="#000">故事</font></a></div>
+            	<div class="more"><a href="./index/components/list.html?s=news_dtwt" target="blank">更多 &gt;</a></div>
     		</div>
-            <ul>
-              
-        	  
-        	  
-        	   
-        	   
-        	  
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=D2EC3DC8-022C-28E5-BB04-50879B55D848');">锅炉“铁军”</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=EB735D1E-A4E7-ADE0-ED87-0E5B387C91DF');">“疫”刻不停保供电</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=E6033A3D-6D07-61F8-4996-44F9CC05C18F');">最有温度的抢修</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=19EEB034-3480-AA63-0436-BF283CA76D1D');">风机“溜冰”记</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=FD2D77EE-103A-145A-AB9C-94BE1F240EA5');">别样的“晚会”</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=3ECEADC2-8D3B-8934-E7CF-8E3698128B09');">汽机房里的“指挥家”</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  
-        	  
-            </ul>
+            <ul></ul>
         </div>
     </div>
 <!--专题报道  最美大唐人-->    
@@ -963,220 +604,26 @@ div.kjtd_div{display:none;}
     </div>
 <!--深度报道  媒体关注  幸福大唐-->
 	<div class="Box1">
-    	<div class="Box3">
+    	<div class="Box3" id='sdbd'>
     		<div class="tltBox">
-        		<div class="tlt_1"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_sdbd.html" target="blank"><font color="#c10000">深度</font><font color="#000">报道</font></a></div>
-            	<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_sdbd.html" target="blank">更多 &gt;</a></div>
+        		<div class="tlt_1"><a href="./index/components/list.html?s=news_sdbd" target="blank"><font color="#c10000">深度</font><font color="#000">报道</font></a></div>
+            	<div class="more"><a href="./index/components/list.html?s=news_sdbd" target="blank">更多 &gt;</a></div>
     		</div>
-            <ul>
-            	
-        	  
-        	  
-        	   
-        	   
-        	  
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=3893F3B6-4FCD-9E8D-8534-833A1A1A5F26');">湖南分公司：战寒潮　顶负荷　全力保发电</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=214A9209-1676-E359-5634-C354B8D89EDC');">【全国青年安全生产示范岗】锦州热电公司：青春为伴　砥</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=FC1F26E7-271B-7E20-E842-F5C9572A42A1');">江苏公司：以检修体制改革激发活力</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=F1D29F41-309E-DA17-3922-CCB7F6945F0C');">西安热电：攻坚路上，你是一道光</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=401D7D55-C0EA-961F-A0BB-A9232037764B');">【全国劳动模范】张波涛：龙滩筑梦　无问西东</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=DF8CCD65-5F09-7860-8757-0AB024278144');">【决胜脱贫攻坚】青海公司：援青十年情　携手奔小康</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  
-        	  
-            </ul>
+            <ul></ul>
         </div>
-    	<div class="Box3">
+    	<div class="Box3" id='mtgz'>
     		<div class="tltBox">
-        		<div class="tlt_1"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_mtgz.html" target="blank"><font color="#c10000">媒体</font><font color="#000">关注</font></a></div>
-            	<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_mtgz.html" target="blank">更多 &gt;</a></div>
+        		<div class="tlt_1"><a href="./index/components/list.html?s=news_mtgz" target="blank"><font color="#c10000">媒体</font><font color="#000">关注</font></a></div>
+            	<div class="more"><a href="./index/components/list.html?s=news_mtgz" target="blank">更多 &gt;</a></div>
     		</div>
-            <ul>
-              
-        	  
-        	  
-        	   
-        	   
-        	  
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=67628C9F-F62E-7681-DE39-28186D01D7B1');">[新华网]中国大唐召开党组会议专题研究全面从严治党工</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=7B3DA692-27EB-FFF9-F924-645BDF5DC378');">[中国能源网]中国大唐召开党组会议专题研究全面从严治</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=63CD3A3F-BD88-1C8B-8E6D-A4205A815AF1');">[缅甸金凤凰中文报]缅甸太平江电站电量创历史新高 “</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=FF0FCE67-3298-707E-F193-92E5F6DF8805');">[新华网]大唐国际全力保障电力热力平稳有序供应</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=E196D0E6-C898-94EA-7510-74FAC688C8FA');">[中国电力报]中国大唐召开党组会议专题研究全面从严治</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  		    
-        	  	  	   
-        	  	  	   
-        	  		    <li>
-        	  		    	
-        	  	  	      		<a href="javascript:openNews('t=&d=0DE12039-1B72-3D56-FE27-C3FA5DF5A8F2');">[新华网]中国大唐党组传达学习贯彻中央经济工作会议精</a>
-        	  	  	    	
-        	  	  	    	
-        	  		    </li>
-        	  	  
-        	  
-        	  
-            </ul>
+            <ul></ul>
         </div>
-    	<div class="Box3" style="margin:0;">
+    	<div class="Box3" id='xfdt' style="margin:0;">
     		<div class="tltBox">
-        		<div class="tlt_1"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_xfdt.html" target="blank"><font color="#c10000">幸福</font><font color="#000">大唐</font></a></div>
-            	<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_xfdt.html" target="blank">更多 &gt;</a></div>
+        		<div class="tlt_1"><a href="./index/components/list.html?s=news_xfdt" target="blank"><font color="#c10000">幸福</font><font color="#000">大唐</font></a></div>
+            	<div class="more"><a href="./index/components/list.html?s=news_xfdt" target="blank">更多 &gt;</a></div>
     		</div>
-            <div class="xfdt">
-            <!--<div class="xfdtImg" style=" width: 159px; margin-right: 6px; "><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_xfdt.html" target="blank"><img width="159" height="80" src="./images/fykp.jpg"/></a></div>-->
-            
-       		
-       		<!--
-       		 <div class="xfdtImg" style=" width: 159px; margin-right: 6px; cursor: pointer;"><img width="159" height="80" src="./index/Image/" onclick="openNews('t=&d=F9EE024E-3CAD-CC21-059A-1D074701CA98')"/></div>
-        	 
-            -->
-            
-           <!-- 
-       		 <div class="xfdtImg" style=" width: 159px;margin-right: 6px; cursor: pointer;"><img width="159" height="80" src="./index/Image/201908221642331694580355.jpg" onclick="openNews('t=&d=B191E8EF-FA45-DB30-A253-0E765E3A953E')"/></div>
-        	 
-            -->
-            
-       		
-             
-			 
-			 <div class="xfdtImg"><a href="javascript:openNews('t=&d=B191E8EF-FA45-DB30-A253-0E765E3A953E');"><img width="120" height="80" src="./index/Image/201908221642331694580355.jpg"/></a></div>
-			 <h4>
-        	  	 <a href="javascript:openNews('t=&d=B191E8EF-FA45-DB30-A253-0E765E3A953E');">建设幸福大唐，共建世界一流能源企业</a>
-             </h4>
-             
-             
-            
-            </div>
-            <ul>
-            
-           
-             
-            	<li>
-            	 
-        	  	  	      		<a href="javascript:openNews('t=&d=F9EE024E-3CAD-CC21-059A-1D074701CA98');">江山公司：为幸福+1度</a>
-        	  	  	    	
-        	  	  	    	
-            	</li>
-            
-           
-             
-            	<li>
-            	 
-        	  	  	      		<a href="javascript:openNews('t=&d=8A6B3A2D-526D-84B7-3DE2-542722732040');">三门峡发电公司：幸福来敲门</a>
-        	  	  	    	
-        	  	  	    	
-            	</li>
-            
-           
-             
-            	<li>
-            	 
-        	  	  	      		<a href="javascript:openNews('t=&d=7F3B0F24-C552-016D-281B-A3D24295651C');">洛阳热电公司：24小时书房让阅读“不打烊”</a>
-        	  	  	    	
-        	  	  	    	
-            	</li>
-            
-            </ul>
+            <ul></ul>
         </div>
     </div>
     <div class="xcfc">
@@ -1479,7 +926,7 @@ var topHead = $('.tmenubg')
 </script>
 
 <script type="text/javascript">
-var jjgzImg1 = '.index/'+'images/link_zgm.gif';
+	var jjgzImg1 = '.index/'+'images/link_zgm.gif';
     	var jjgzImg2 = './index/'+'images/link_jjgz.gif';
     	var jjgzImg3 = './index/'+'images/link_sxwj.gif';
     	var jjgzFlag = 0;
@@ -1505,9 +952,7 @@ var jjgzImg1 = '.index/'+'images/link_zgm.gif';
 					jjgzFlag = 0;
 				break;
 			}
-		}
-		
-		
+		}	
 		function jjgzInterval(){
 			return setInterval(show,3000);// 注意函数名没有引号和括弧！
 		}
@@ -1560,24 +1005,6 @@ var jjgzImg1 = '.index/'+'images/link_zgm.gif';
 		if(!!centerImageArray && centerImageArray.length>0){
 			scrollCenterImages();
 		}
-		
-		/*
-		function centerInterval(){
-			return setInterval(showcenter,2000);// 注意函数名没有引号和括弧！
-		}
-		
-		var myIntCenFlag = centerInterval();
-		$('#lan_ad').hover(function(){ 
-				clearInterval(myIntCenFlag);
-		},function(){ 
-				myIntCenFlag = centerInterval();
-		});
-		*/
-		/*
-		$('#lan_ad a').attr("href","http://www.china-cdt.com/dtwz/indexAction.ndo?action=showzhuanti&mark=zhuanti_2016gzhy");
-		$('#lan_ad a').attr("target","_blank");
-		$('#lan_ad a img').attr("src","./index/images/2016gzhy.jpg");
-		*/
 (function($) {
     $.fn.floatAd = function(options) {
 		console.log('options-----',options)
@@ -1658,12 +1085,133 @@ var jjgzImg1 = '.index/'+'images/link_zgm.gif';
     }
 })(jQuery);
 
+
+// openNews 共有方法
+function getBoxDataList (boxDom,dataList) {
+	var tempDom= $(boxDom);
+	if (!tempDom || dataList.length === 0) return;
+	listStr = '';
+	for(var i=0; i < dataList.length; i++) {
+		listStr += `<li><a data-url='${dataList[i].url}' href="#">${dataList[i].title}</a></li>`
+	}
+	tempDom.html(listStr);
+	tempDom.click(function(e) {
+		console.log(e.target.tagName)
+			if(e.target.tagName.toLowerCase()=='a'){
+				openNews($(e.target).attr('data-url')) 
+			}
+	})
+}
+
+// 集团新闻  ------- 开始---------
+	var jtNewsData = [
+		{
+			url:'t=&d=BA913255-A25A-BFC5-F676-BF7165D6D7CE',
+			title:'集团公司党组传达学习贯彻中央经济工作会议精神'
+		},
+		{
+			url:'t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA',
+			title:'集团公司召开冬季保暖和安全保电工作视频会'
+		},
+		{
+			url:'t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A',
+			title:'邹磊会见中交集团党委书记、董事长、总经理王彤宙'
+		},
+		{
+			url:'t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4',
+			title:'集团公司召开老领导老同志座谈会'
+		},
+	]
+	getBoxDataList('.jtNews ul',jtNewsData)
+// 集团新闻  ------- 结束---------
+
+// 系统动态  基层简讯  一线故事 ------- 开始---------
+
+	//1. 系统动态
+	var xtdtNewsData = [
+		{
+			url:'t=&d=AFA02F4A-AAEE-6AE7-DD45-FE0AD7D4D8CF',
+			title:'黑龙江公司：打造民生“暖屋子”'
+		},
+		{
+			url:'t=&d=DF8C8F04-E618-97BE-973A-B0E3BF05CAC2',
+			title:'江苏公司：以考促学提升素质能力'
+		}
+	]
+	getBoxDataList('#xtdt ul',xtdtNewsData)
+	
+	//2. 基层简讯
+	var jcjxNewsData = [
+		{
+			url:'t=&d=26CDA4D7-EE64-6E57-8373-9BF5AF3EE652',
+			title:'张家口热电公司优质大唐热应对极寒天”'
+		},
+		{
+			url:'t=&d=1EE40DCB-381D-D2AA-5CC9-0037823239D6',
+			title:'桂冠山东分公司：全面启动防寒潮保发电模式'
+		}
+	]
+	getBoxDataList('#jcjx ul',jcjxNewsData)
+
+	//3. 一线故事
+	var yxgsNewsData = [
+		{
+			url:'t=&d=D2EC3DC8-022C-28E5-BB04-50879B55D848',
+			title:'锅炉“铁军”'
+		},
+		{
+			url:'t=&d=EB735D1E-A4E7-ADE0-ED87-0E5B387C91DF',
+			title:'“疫”刻不停保供电'
+		}
+	]
+	getBoxDataList('#yxgs ul',yxgsNewsData)
+
+// 系统动态  基层简讯  一线故事 ------- 结束---------  
+
+// 深度报道  媒体关注  幸福大唐 ------- 开始---------  
+
+	//1. 深度报道
+	var sdbdNewsData = [
+		{
+			url:'t=&d=3893F3B6-4FCD-9E8D-8534-833A1A1A5F26',
+			title:'湖南分公司：战寒潮　顶负荷　全力保发电'
+		},
+		{
+			url:'t=&d=214A9209-1676-E359-5634-C354B8D89EDC',
+			title:'【全国青年安全生产示范岗】锦州热电公司：青春为伴　砥'
+		}
+	]
+	getBoxDataList('#sdbd ul',sdbdNewsData)
+	
+	//2. 媒体关注
+	var mtgzNewsData = [
+		{
+			url:'t=&d=67628C9F-F62E-7681-DE39-28186D01D7B1',
+			title:'[新华网]中国大唐召开党组会议专题研究全面从严治党工'
+		},
+		{
+			url:'t=&d=7B3DA692-27EB-FFF9-F924-645BDF5DC378',
+			title:'[中国能源网]中国大唐召开党组会议专题研究全面从严治'
+		}
+	]
+	getBoxDataList('#mtgz ul',mtgzNewsData)
+
+	//3. 幸福大唐
+	var xfdtNewsData = [
+		{
+			url:'t=&d=F9EE024E-3CAD-CC21-059A-1D074701CA98',
+			title:'江山公司：为幸福+1度'
+		},
+		{
+			url:'t=&d=8A6B3A2D-526D-84B7-3DE2-542722732040',
+			title:'三门峡发电公司：幸福来敲门'
+		}
+	]
+	getBoxDataList('#xfdt ul',xfdtNewsData)
+
+// 深度报道  媒体关注  幸福大唐 ------- 结束---------  
+
 </script>
-
 <iframe  scrolling="no" frameborder="0" height="220" width="100%" src="./bottom.html" ></iframe>
- 
-
-
-
 </body>
 </html>
