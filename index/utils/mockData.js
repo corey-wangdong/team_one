@@ -13,112 +13,112 @@ var headData = [
   {
     title: "aboutDT",
     desc: "关于大唐",
-    firstLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_gsjj",
+    firstLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_gsjj&fl=aboutDT",
     imgUrl: './index/images/nav-img-01.jpg',
     childs: [
       {
         childTitle: "companyProfile",
         childDesc: "公司简介",
-        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_gsjj",
+        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_gsjj&fl=aboutDT",
       },
       {
         childTitle: "companyLeader",
         childDesc: "公司领导",
-        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_gsld",
+        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_gsld&fl=aboutDT",
       },
       {
         childTitle: "companyHonor",
         childDesc: "公司荣誉",
-        secondLevelUrl: "action=showNewsList&t=index_gydt&s=zzry_gsry",
+        secondLevelUrl: "action=showNewsList&t=index_gydt&s=zzry_gsry&fl=aboutDT",
       },
       {
         childTitle: "organizationalStructure",
         childDesc: "组织架构",
-        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_zzjg",
+        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_zzjg&fl=aboutDT",
       },
       {
         childTitle: "memberUnits",
         childDesc: "成员单位",
-        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_cydw",
+        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_cydw&fl=aboutDT",
       },
       {
         childTitle: "memorabilia",
         childDesc: "大事记",
-        secondLevelUrl: "action=showNewsInYearList&t=index_gydt&s=gydt_djs",
+        secondLevelUrl: "action=showNewsInYearList&t=index_gydt&s=gydt_djs&fl=aboutDT",
       },
       {
         childTitle: "contactInformation",
         childDesc: "联系方式",
-        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_lxfs",
+        secondLevelUrl: "action=showFirstDoc&t=index_gydt&s=gydt_lxfs&fl=aboutDT",
       }
     ]
   },
   {
     title: "businessDevelopment",
     desc: "经营发展",
-    firstLevelUrl: "action=showFirstDoc&s=jyfz_cybk&t=index_jyfz&t=index_jyfz&s=jyfz_scjy",
+    firstLevelUrl: "action=showFirstDoc&s=jyfz_cybk&t=index_jyfz&t=index_jyfz&s=jyfz_scjy&fl=businessDevelopment",
     imgUrl: './index/images/nav-img-02.jpg',
     childs: [
       {
         childTitle: "productionAndOperation",
         childDesc: "生产经营",
-        secondLevelUrl: "action=showFirstDoc&s=jyfz_cybk&t=index_jyfz&t=index_jyfz&s=jyfz_scjy",
+        secondLevelUrl: "action=showFirstDoc&s=jyfz_cybk&t=index_jyfz&t=index_jyfz&s=jyfz_scjy&fl=businessDevelopment",
       },
       {
         childTitle: "financialReports",
         childDesc: "财务报告",
-        secondLevelUrl: "action=showFirstDoc&s=cwbg_zc&t=index_jyfz&t=index_jyfz&s=jyfz_cwbg",
+        secondLevelUrl: "action=showFirstDoc&s=cwbg_zc&t=index_jyfz&t=index_jyfz&s=jyfz_cwbg&fl=businessDevelopment",
       }
     ]
   },
   {
     title: "newsCenter",
     desc: "新闻中心",
-    firstLevelUrl: "action=showNewsInYearList&t=index_news&s=news_sjjs",
+    firstLevelUrl: "action=showNewsInYearList&t=index_news&s=news_sjjs&fl=newsCenter",
     imgUrl: './index/images/nav-img-03.jpg',
     childs: [
       {
         childTitle: "currentAffairs",
         childDesc: "时政要闻",
-        secondLevelUrl: "action=showNewsInYearList&t=index_news&s=news_sjjs",
+        secondLevelUrl: "action=showNewsInYearList&t=index_news&s=news_sjjs&fl=newsCenter",
       },
       {
         childTitle: "stateOwnedAssetsNews",
         childDesc: "国资动态",
-        secondLevelUrl: "action=showFirstDoc&s=cwbg_zc&t=index_jyfz&t=index_jyfz&s=jyfz_cwbg",
+        secondLevelUrl: "action=showFirstDoc&s=cwbg_zc&t=index_jyfz&t=index_jyfz&s=jyfz_cwbg&fl=newsCenter",
       }
     ]
   },
   {
     title: "socialResponsibility",
     desc: "社会责任",
-    firstLevelUrl: "action=showNewsList&t=index_shzr&s=shzr_shzrbg",
+    firstLevelUrl: "action=showNewsList&t=index_shzr&s=shzr_shzrbg&fl=socialResponsibility",
     imgUrl: './index/images/nav-img-04.jpg',
     childs: [
       {
         childTitle: "responsibilityReport",
         childDesc: "责任报告",
-        secondLevelUrl: "action=showNewsList&t=index_shzr&s=shzr_shzrbg",
+        secondLevelUrl: "action=showNewsList&t=index_shzr&s=shzr_shzrbg&fl=socialResponsibility",
       }
     ]
   },
   {
     title: "corporateCulture",
     desc: "企业文化",
-    firstLevelUrl: "action=showNewsInYearList&t=index_qywh&s=qywh_qykfr",
+    firstLevelUrl: "action=showNewsInYearList&t=index_qywh&s=qywh_qykfr&fl=corporateCulture",
     imgUrl: './index/images/nav-img-05.jpg',
     childs: [
       {
         childTitle: "enterpriseOpenDay",
         childDesc: "企业开放日",
-        secondLevelUrl: "action=showNewsInYearList&t=index_qywh&s=qywh_qykfr",
+        secondLevelUrl: "action=showNewsInYearList&t=index_qywh&s=qywh_qykfr&fl=corporateCulture",
       }
     ]
   },
   {
     title: "InvestorRelations",
     desc: "投资者关系",
-    firstLevelUrl: "action=showNewsList&t=index_tzzgx&s=index_tzzgx&t=index_tzzgx",
+    firstLevelUrl: "action=showNewsList&t=index_tzzgx&s=index_tzzgx&t=index_tzzgx&fl=InvestorRelations",
     imgUrl: './index/images/nav-img-06.jpg',
     childs: [
       {
