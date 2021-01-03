@@ -1,9 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-
 <html>
-
 <head>
 <title>中国大唐集团有限公司</title>
 <link rel="Shortcut Icon" href="./index/images/favicon.ico" />
@@ -40,8 +37,6 @@
 <link rel="stylesheet" id="sc" type="text/css" href=""/>
 
 <script type="text/javascript"> 
-
-
 
 window.onload=function(){
 
@@ -94,39 +89,10 @@ function openNews(url){
 	window.location.href = baseUrl+"/index/components/articles.html?"+url;
 }
 
-function openMenu(url){
-console.log('url-----------',url)
-	//window.open("http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&"+url+"&"+Math.random());
-	// var urlStr=url.split("="); 
-	// if(urlStr[1]=="showFirstDoc&t"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/showfirstDoc/"+urlStr[2]+".html");
-	// }else if(urlStr[1]=="showNewsInYearList&t"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsYear/"+urlStr[2]+".html");
-	// }else if(urlStr[1]=="showNewsList&t"&&urlStr[2].indexOf("&s")>-1){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsListt/"+urlStr[2]+"="+urlStr[3]+".html");
-	// }else if(urlStr[1]=="showNewsList&s"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsLists/"+"&s="+urlStr[2]+"="+urlStr[3]+".html");
-	// }else if(urlStr[1]=="showNewsIndexing&t"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/shownewsIndexing/"+urlStr[2]+".html");
-	// }else if(urlStr[1]=="showFirstDoc&s"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/showfirstDoc/"+urlStr[3]+".html");
-	// }
-
-	// let baseUrl = window.location.href.split('/articles.html')[0];
-    // window.open(baseUrl+'/list.html?'+url)
-
-}
-
 function childNews(url){
-
-  
   let baseUrl = window.location.href.split('/index.html')[0];
-
-	window.location.href = baseUrl+"/index/components/articles.html?"+url;
-	
+  window.location.href = baseUrl+"/index/components/articles.html?"+url;	
 }
-
-
 var newwindowIndex=0;
 function openWin(url){
 	var baseUrl = window.location.href.split('/index.html')[0];
@@ -184,8 +150,7 @@ $(document).ready(function(){
     		}
     	});
     }
-  
-    
+
     if($('.xcfc_bxslider img').length>0){
 		$('.xcfc_bxslider').bxSlider({
 			slideWidth: 280,
@@ -272,21 +237,16 @@ div.kjtd_div{display:none;}
     	<div class="se_all">
     	 <form method="post" name="searchform" >
               <span class="se_in">
-				        <input type="text" value="" name="keyWord" id="keyWord" onkeydown="if(event.keyCode==13){search('')}" />
+				    <input type="text" value="" name="keyWord" id="keyWord" onkeydown="if(event.keyCode==13){search('')}" />
               </span>
             <input type="button" value="" class="se_bu"  style="cursor: pointer;" onclick="search('');" />
-              <input type="button" value="" class="se_bu_high"  style="cursor: pointer;" onclick="searchGj('');" /> 
-             </form>
-    		 
-
+                <input type="button" value="" class="se_bu_high"  style="cursor: pointer;" onclick="searchGj('');" /> 
+            </form>
     	</div>
     </div>
-
 <!-- 导航栏盒子 -->
 <div class="tmenubg"></div>
-
 </div>
-
 <!-- top轮播图 背景图方式呈现 -->
 <div class="banner" style="background: url(./index/Image/banner_0205.jpg) center top no-repeat;">
   <div id="solid">
@@ -316,230 +276,69 @@ div.kjtd_div{display:none;}
   </div>
   <script src="./index/js/fordboyxn.js"></script>
 </div>
-
-
 <!-- 代码 结束 -->
 <div>
-<div class="KH"><img src="./index/images/kouhao.jpg"></div>
+	<div class="KH"><img src="./index/images/kouhao.jpg"></div>
+	<div class="main">
+		<div>
+		<!--时政要闻-->
+			<div class="szBox">
+				<div class="szImg">
+					<a href="./index/components/list.html?s=news_sjjs" target="blank">
+						<img src="./index/images/szyw.png"/>
+					</a>
+				</div>
+				<div class="sz" id="szyw">
+					<ul></ul>
+				</div>
+				<div class="arrow"><a href="./index/components/list.html?s=news_sjjs" target="blank"><img src="./index/images/arrow.jpg"/></a></div>
+			</div>
+			</div>
+		<!--集团新闻-->
+			<div class="jtBox" style="height:520px;">
+				<div class="tltBox" style="width:1130px; position:relative;">
+					<div class="tlt_1"><a href="./index/components/list.html?s=news_dtyw" target="blank"><font color="#c10000">集团</font><font color="#000">新闻</font></a></div>     	
+					<div class="more"><a href="./index/components/list.html?s=news_dtyw" target="blank">更多 &gt;</a></div>
+				</div>
+				<div class="jtImg" >
+				<script type="text/javascript">var rotaionArr= new Array();</script>
+				<div id="yx-rotaion" class="yx-rotaion" style="height:435px;">
+					<ul class="rotaion_list">
+						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426';</script>
+						<li><a href="javascript:openWin('action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426')"><img src="./index/Image/yuantu_202012301421461924160092.jpg" alt="国务院国资委副主任袁野到中国大唐调研指导冬季..."></a></li>
+						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C';</script>
+						<li><a href="javascript:openWin('action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C')"><img src="./index/Image/yuantu_20201228173048-568630772.jpg" alt="集团公司传达学习贯彻中央企业负责人会议精神"></a></li>				
+						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4';</script>				
+						<li><a href="javascript:openWin('action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4')"><img src="./index/Image/yuantu_20201230140925-1425370881.jpg" alt="迎新年 谋发展｜集团公司召开老领导老同志座谈..."></a></li>				
+						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A';</script>
+						<li><a href="javascript:openWin('action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A')"><img src="./index/Image/yuantu_20201230140547-444292346.jpg" alt="邹磊会见中交集团党委书记、董事长、总经理王彤..."></a></li>
+						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA';</script>
+						<li><a href="javascript:openWin('action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA')"><img src="./index/Image/yuantu_202012300911101677904464.jpg" alt="集团公司召开冬季保暖和安全保电工作视频会"></a></li>
 
-<div class="main">
-<div>
-<!--时政要闻-->
-	<div class="szBox">
-    	<div class="szImg">
-        	<a href="./index/components/list.html?s=news_sjjs" target="blank">
-    		<img src="./index/images/szyw.png"/>
-    		</a></div>
-        <div class="sz" id="szyw">
-        	<ul></ul>
-        </div>
-        <div class="arrow"><a href="./index/components/list.html?s=news_sjjs" target="blank"><img src="./index/images/arrow.jpg"/></a></div>
-  	</div>
-  	</div>
-<!--集团新闻-->
-  	<div class="jtBox" style="height:520px;">
-    	<div class="tltBox" style="width:1130px; position:relative;">
-        	<div class="tlt_1"><a href="./index/components/list.html?s=news_dtyw" target="blank"><font color="#c10000">集团</font><font color="#000">新闻</font></a></div>
-        	
-            <div class="more"><a href="./index/components/list.html?s=news_dtyw" target="blank">更多 &gt;</a></div>
-    	</div>
-        <div class="jtImg" >
-        <script type="text/javascript">var rotaionArr= new Array();</script>
-		<div id="yx-rotaion" class="yx-rotaion" style="height:435px;">
-			<ul class="rotaion_list">
-				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426';</script>
-				<li><a href="javascript:openWin('action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426')"><img src="./index/Image/yuantu_202012301421461924160092.jpg" alt="国务院国资委副主任袁野到中国大唐调研指导冬季..."></a></li>
-				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C';</script>
-
-				<li><a href="javascript:openWin('action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C')"><img src="./index/Image/yuantu_20201228173048-568630772.jpg" alt="集团公司传达学习贯彻中央企业负责人会议精神"></a></li>
+					</ul>
+				</div>
+				<script type="text/javascript" src="./index/js/jquery.yx_rotaion.js"></script>
+				<script type="text/javascript">$(".yx-rotaion").yx_rotaion({auto:true});</script></div>
+				<div class="jtNews">
+							<!---->  	
+					<h1><a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');">邹磊率队拜访国家能源局局长章建华</a></h1>
+					<h2>12月29日，集团公司党组书记、董事长邹磊率队拜访国家能源局党组书记、局长章建华，双方就深化落实能源安全新战略，全力保障国家能源安全，推动能源绿色低碳转型发展进行深入交流……<a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');" class="detailLink">[详情]</a>
+								</h2>	
 				
-				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4';</script>
-				
-				<li><a href="javascript:openWin('action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4')"><img src="./index/Image/yuantu_20201230140925-1425370881.jpg" alt="迎新年 谋发展｜集团公司召开老领导老同志座谈..."></a></li>
-				
-				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A';</script>
-				
-				<li><a href="javascript:openWin('action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A')"><img src="./index/Image/yuantu_20201230140547-444292346.jpg" alt="邹磊会见中交集团党委书记、董事长、总经理王彤..."></a></li>
-				
-				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA';</script>
-			
-				<li><a href="javascript:openWin('action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA')"><img src="./index/Image/yuantu_202012300911101677904464.jpg" alt="集团公司召开冬季保暖和安全保电工作视频会"></a></li>
-			
-			</ul>
+					<ul style="margin-top: 10px;"></ul>
+				</div>
+			</div>
+		<!--公示公告-->   
+		<div class="NtcBox" style="height:0px;">
+			<div id='contentShow'></div>
 		</div>
-		<script type="text/javascript" src="./index/js/jquery.yx_rotaion.js"></script>
-		<script type="text/javascript">$(".yx-rotaion").yx_rotaion({auto:true});</script></div>
-        <div class="jtNews">
-    	  			<!---->  	
-        	<h1><a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');">邹磊率队拜访国家能源局局长章建华</a></h1>
-            <h2>12月29日，集团公司党组书记、董事长邹磊率队拜访国家能源局党组书记、局长章建华，双方就深化落实能源安全新战略，全力保障国家能源安全，推动能源绿色低碳转型发展进行深入交流……<a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');" class="detailLink">[详情]</a>
-    	  				</h2>	
-    	
-        	<ul style="margin-top: 10px;"></ul>
-        </div>
-  	</div>
-<!--公示公告-->   
-  <div class="NtcBox"    style="height:0px;">
 	</div>
-	<div id='contentShow'></div>
-</div>
-</div>
 </div>
 <script type="text/javascript">
 	var centerImageArray = [];
-</script>
-<script>
-
-  var topHead = $('.tmenubg')
-
-  var currentHeadDom = createdDom(headData, 'head')
-  topHead.html(currentHeadDom);
-
-
-
-</script>
-
-<script type="text/javascript">
-	var jjgzImg1 = '.index/'+'images/link_zgm.gif';
-    	var jjgzImg2 = './index/'+'images/link_jjgz.gif';
-    	var jjgzImg3 = './index/'+'images/link_sxwj.gif';
-    	var jjgzFlag = 0;
-    	 
-		function show(){
-			switch(jjgzFlag){
-				case 0:
-					$('div.lan_jjgz a').attr("href","http://www.china-cdt.com:80/dtwz/2015html/mychinadream.html");
-					$('div.lan_jjgz a').attr("target","_blank");
-					$('div.lan_jjgz a img').attr("src",jjgzImg1);
-					jjgzFlag = 2;
-				break;
-				case 1:
-					$('div.lan_jjgz a').attr("href",link_jjgz_url);
-					$('div.lan_jjgz a').attr("target","_blank");
-					$('div.lan_jjgz a img').attr("src",jjgzImg2);
-					jjgzFlag = 2;
-				break;
-				case 2:
-					$('div.lan_jjgz a').attr("href",'http://www.china-cdt.com:80/dtwz/2015html/sxwj.html');
-					$('div.lan_jjgz a').attr("target","_blank");
-					$('div.lan_jjgz a img').attr("src",jjgzImg3);
-					jjgzFlag = 0;
-				break;
-			}
-		}	
-		function jjgzInterval(){
-			return setInterval(show,3000);// 注意函数名没有引号和括弧！
-		}
-		var myIntFlag = jjgzInterval();
-			$('div.lan_jjgz').hover(function(){ 
-				clearInterval(myIntFlag);
-			},function(){ 
-				myIntFlag = jjgzInterval();
-			});
-	
-		function scrollCenterImages(){
-			var indexBGImg_Photos_index = 0;
-			if(centerImageArray.length>1){
-				var indexBGImg_Time = setInterval(function(){
-				$("#lan_ad a img").fadeTo("fast",0,function(){
-						$(this).attr("src",centerImageArray[indexBGImg_Photos_index]['imageUrl']);
-						$('#lan_ad a').attr("href",centerImageArray[indexBGImg_Photos_index]['linkUrl']);
-						$('#lan_ad a').attr("target","_blank");
-						indexBGImg_Photos_index++;
-						if(indexBGImg_Photos_index==centerImageArray.length){
-							indexBGImg_Photos_index = 0;
-						}
-					}).fadeTo("fast",1);
-				},3000);
-			}else{
-				$('#lan_ad a img').attr("src",centerImageArray[0]['imageUrl']);
-				$('#lan_ad a').attr("href",centerImageArray[0]['linkUrl']);
-				$('#lan_ad a').attr("target","_blank");
-			}
-		}	
-		if(!!centerImageArray && centerImageArray.length>0){
-			scrollCenterImages();
-		}
-(function($) {
-    $.fn.floatAd = function(options) {
-		console.log('options-----',options)
-        var defaults = {
-            imgSrc:"",
-            url:"",
-            openStyle: 1,
-            speed: 30,
-            width:100,
-            height:100
-        };
-        var options = $.extend(defaults, options);
-        var _target = options.openStyle == 1 ? "target='_blank'": '';
-        var html = "<div id='float_ad' style='position:absolute;left:0px;top:0px;z-index:1000000;cleat:both;'>";
-        if(!!options.url){
-        	 html += "  <a href='" + options.url + "' " + _target + "><img src='" + options.imgSrc + "' border='0' class='float_ad_img' width='"+options.width+"' height='"+options.height+"' /></a>";
-        }else{
-        	 html += "<img src='" + options.imgSrc + "' border='0' class='float_ad_img' width='"+options.width+"' height='"+options.height+"' />";
-        }
-       
-        //html += "<img src='" + options.imgSrc + "' border='0' class='float_ad_img'/>";
-        //html += "<div id='close_f_ad' style='position:absolute;width:30px;height:16px;top:-18px;right:0px;cursor:pointer;float:right;font-size:14px'>关闭</div></div>";
-        $('body').append(html);
-        function init() {
-            var x = 0,
-            y = 0;
-            var xin = true,
-            yin = true;
-            var step = 1;
-            var delay = 10;
-            var obj = $("#float_ad");
-            obj.find('img.float_ad_img').load(function() {
-                var float = function() {
-                    var L = T = 0;
-                    var OW = obj.width();
-                    var OH = obj.height();
-                    var DW = $(document).width();
-                    var DH = $(document).height();
-                    x = x + step * (xin ? 1 : -1);
-                    if (x < L) {
-                        xin = true;
-                        x = L;
-                    }
-                    if (x > DW - OW - 1) {
-                        xin = false;
-                        x = DW - OW - 1;
-                    }
-                    y = y + step * (yin ? 1 : -1);
-                    if (y > DH - OH - 10) {
-                        yin = false;
-                        y = DH - OH - 10;
-                    }
-                    if (y < T) {
-                        yin = true;
-                        y = T;
-                    }
-                    var left = x;
-                    var top = y;
-                    obj.css({
-                        'top': top,
-                        'left': left
-                    })
-                };
-                var itl = setInterval(float, options.speed);
-                $('#float_ad').mouseover(function() {
-                    clearInterval(itl)
-                });
-                $('#float_ad').mouseout(function() {
-                    itl = setInterval(float, options.speed)
-                })
-            })
-        }
-        init();
-        $('#close_f_ad').click(function(){
-                    $('#float_ad').css('display','none');
-                    clearInterval(itl);
-                });
-    }
-})(jQuery);
-
+	var topHead = $('.tmenubg')
+  	var currentHeadDom = createdDom(headData, 'head')
+  	topHead.html(currentHeadDom);
 // 时政要闻 ----------------
 	getDataList('#szyw ul',szNewsData,'<span><!--12-30-->&bull;</span>')
 
@@ -547,7 +346,7 @@ div.kjtd_div{display:none;}
 	// 2. 右边list
 	getDataList('.jtNews ul',jtNewsData)
 
-// 系统动态  基层简讯  一线故事 ------- 开始---------
+// 系统动态  基层简讯  一线故事.... 
 	getBoxDataList('#contentShow',contentData)
 
 </script>
