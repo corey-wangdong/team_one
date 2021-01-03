@@ -405,9 +405,7 @@ div.kjtd_div{display:none;}
     <div class="ipLtree">
         <div class="ipLtree_ul">
          <ul >
-            <li class="liout" onclick="javascript:menuNews('/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_sjjs')" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a href="#" style="color:#ca0000;font-weight:bold;font-size:16px;">时政要闻</a></li> 
-
-            <li class="liout" onclick="javascript:menuNews('/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_jjgz')" ><a href="#" >国资动态</a></li> 
+           
           </ul>
         </div>
     </div>
@@ -445,30 +443,11 @@ div.kjtd_div{display:none;}
 </html>
 <script>
     // 改变左边菜单
-    var menu =
-    [
-        {
-            url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_sjjs',
-            title:'时政要闻'
-        },
-        {
-            url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_wzqh',
-            title:'十九届五中全会'
-        },
-        {
-            url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_jjgz',
-            title:'专项整治三年行动'
-        },
-        {
-            url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_llwy',
-            title:'理论文苑'
-        },
-        {
-            url:'/indexAction.ndo?action=showFirstDoc&t=index_news&s=news_zxgz_gsgg',
-            title:'公示公告'
-        },
-    ]
-
+    var fl = GetQueryString('fl')
+    var firstMenu = headData.filter((v) => {
+        return v.title === fl
+    })
+    var menu = firstMenu.childs
     function renderMenu(menu){
         var menuShow = $('.ipLtree_ul ul')
         var str =''
@@ -476,9 +455,9 @@ div.kjtd_div{display:none;}
         for(var i = 0; i < menu.length; i++) {
             var s = menu[i].url.split('s=')[1]
             if(getQueryString.includes(s)){
-                str += `<li class="liout"   onclick="javascript:menuNews(${menu[i].url})" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a   style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].url}">${menu[i].title}</a></li>`
+                str += `<li class="liout"   onclick="javascript:menuNews(${menu[i].secondLevelUrl})" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a   style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].secondLevelUrl}">${menu[i].childDesc}</a></li>`
             }else{
-                str += `<li class="liout"  onclick="javascript:menuNews(${menu[i].url})" ><a  data_index="${menu[i].url}">${menu[i].title}</a></li>`
+                str += `<li class="liout"  onclick="javascript:menuNews(${menu[i].secondLevelUrl})" ><a  data_index="${menu[i].secondLevelUrl}">${menu[i].childDesc}</a></li>`
             }
         }
         menuShow.html(str)

@@ -50,32 +50,16 @@
 <script type="text/javascript" src="../../otherResource/jqueryPlugin/jquery.vticker-min.js"></script>
 <script src="../utils/mockData.js"></script>
 <script src="../utils/contantMethods.js"></script>
+<script src="../utils/utils.js"></script>
 <script type="text/javascript"> 
 
 function openNews(url){
-    console.log('url--------',url)
-	//window.open("http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&"+url+"&"+Math.random());
 	var urlStr=url.split("="); 
     window.open("../components/articles.html?"+urlStr[1]);
 }
 
 //父栏目链接
 function openMenu(url){
-	//window.open("http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&"+url+"&"+Math.random());
-	// var urlStr=url.split("="); 
-	// if(urlStr[1]=="showFirstDoc&t"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/showfirstDoc/"+urlStr[2]+".html");
-	// }else if(urlStr[1]=="showNewsInYearList&t"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsYear/"+urlStr[2]+".html");
-	// }else if(urlStr[1]=="showNewsList&t"&&urlStr[2].indexOf("&s")>-1){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsListt/"+urlStr[2]+"="+urlStr[3]+".html");
-	// }else if(urlStr[1]=="showNewsList&s"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsLists/"+"&s="+urlStr[2]+"="+urlStr[3]+".html");
-	// }else if(urlStr[1]=="showNewsIndexing&t"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/shownewsIndexing/"+urlStr[2]+".html");
-	// }else if(urlStr[1]=="showFirstDoc&s"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/showfirstDoc/"+urlStr[3]+".html");
-    // }
     let baseUrl = window.location.href.split('/articles.html')[0];
     window.open(baseUrl+'/list.html?'+'')
 }
@@ -111,33 +95,6 @@ function childNews(url){
 
 //左侧导航栏链接
 function menuNews(url){
-	//alert(url);
-	//javascript:childNews('&t=&s=')--子栏目链接
-	// var urlStr=url.split("="); 
-	// if(urlStr.lenght=4){
-	// if(urlStr[1]=="showFirstDoc&t"){
-	// 	window.location ="http://www.china-cdt.com:80/dtwz/showfirst/"+urlStr[2]+"="+urlStr[3]+".html";
-	// }else if(urlStr[1]=="showNewsInYearList&t"){
-	// 	window.location ="http://www.china-cdt.com:80/dtwz/showNewsInYearList/"+urlStr[2]+"="+urlStr[3]+".html";
-	// }else if(urlStr[1]=="showNewsList&t"){
-	// 	window.location ="http://www.china-cdt.com:80/dtwz/showNewsList/"+urlStr[2]+"="+urlStr[3]+".html";
-	// }else if(urlStr[1]=="showImgList&t"){
-	// 	window.location ="http://www.china-cdt.com:80/dtwz/showImgList/"+urlStr[2]+"="+urlStr[3]+".html";
-	// }else if(urlStr[1]=="showNewsIndexing&t"){
-	// 	window.open("http://www.china-cdt.com:80/dtwz/NewsIndexing/"+urlStr[2]+"="+urlStr[3]+".html");
-	// }
-	// }
-	//  if(urlStr.lenght=6){
-	// 	if(urlStr[1]=="showFirstDoc&s"){
-	// 	window.location ="http://www.china-cdt.com:80/dtwz/showfirst_leve3/"+urlStr[2]+"="+urlStr[3]+".html";
-	// }else if(urlStr[1]=="showNewsInYearList&s"){
-	// 	window.location ="http://www.china-cdt.com:80/dtwz/showNewsInYearList_leve3/"+urlStr[2]+"="+urlStr[3]+".html";
-	// }else if(urlStr[1]=="showNewsList&s"){
-	// 	window.location ="http://www.china-cdt.com:80/dtwz/showNewsList_leve3/"+urlStr[2]+"="+urlStr[3]+".html";
-	// }else if(urlStr[1]=="showImgList&s"){
-	// 	window.location ="http://www.china-cdt.com:80/dtwz/showImgList_leve3/"+urlStr[2]+"="+urlStr[3]+".html";
-	// };
-    // }
     let baseUrl = window.location.href.split('/articles.html')[0];
     window.open(baseUrl+'/list.html?'+url)
 }
@@ -321,11 +278,6 @@ div.kjtd_div{display:none;}
     <div class="ipLtree">
         <div class="ipLtree_ul">
          <ul>
-
-			      <li class="liout" onclick="javascript:menuNews('/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_sjjs')" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a href="#" style="color:#ca0000;font-weight:bold;font-size:16px;">时政要闻</a></li>
-
-			      <li class="liout" onclick="javascript:menuNews('/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_jjgz')" ><a href="#" >国资动态</a></li>
-
           </ul>
         </div>
     </div>
@@ -449,27 +401,12 @@ div.kjtd_div{display:none;}
   var topHead = $('.tmenubg')
   var currentHeadDom = createdDom(headData, 'head')
   topHead.html(currentHeadDom);
-
-
-    var menu =
-        [
-            {
-                url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_wzqh',
-                title:'十九届五中全会'
-            },
-            {
-                url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_jjgz',
-                title:'专项整治三年行动'
-            },
-            {
-                url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_llwy',
-                title:'理论文苑'
-            },
-            {
-                url:'/indexAction.ndo?action=showFirstDoc&t=index_news&s=news_zxgz_gsgg',
-                title:'公示公告'
-            },
-        ]
+  
+	var fl = GetQueryString('fl')
+	var firstMenu = headData.filter((v) => {
+		return v.title === fl
+	})
+	var menu = firstMenu.childs
     function renderMenu(menu) {
         var menuShow = $('.ipLtree_ul ul')
         var str =''
