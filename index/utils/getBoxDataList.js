@@ -12,8 +12,8 @@ function getBoxDataList (boxDom,dataList) {
 
         tempStr += `<div class="Box3">
         <div class="tltBox">
-            <div class="tlt_1"><a href="./index/components/list.html?s=index_gydt" target="blank"><font color="#c10000">${dataList[i].titleContent.preTitle}</font><font color="#000">${dataList[i].titleContent.lastTitle}</font></a></div>
-            <div class="more"><a href="./index/components/list.html?s=index_gydt" target="blank">更多 &gt;</a></div>
+            <div class="tlt_1"><a href="./index/components/list.html?s=${dataList[i].title}" target="blank"><font color="#c10000">${dataList[i].titleContent.preTitle}</font><font color="#000">${dataList[i].titleContent.lastTitle}</font></a></div>
+            <div class="more"><a href="./index/components/list.html?s=${dataList[i].title}" target="blank">更多 &gt;</a></div>
         </div>
         <ul>${listStr}</ul></div>`
     }
