@@ -401,7 +401,7 @@ div.kjtd_div{display:none;}
   var topHead = $('.tmenubg')
   var currentHeadDom = createdDom(headData, 'head')
   topHead.html(currentHeadDom);
-  
+
 	var fl = GetQueryString('fl')
 	var firstMenu = headData.filter((v) => {
 		return v.title === fl
@@ -413,9 +413,9 @@ div.kjtd_div{display:none;}
         for(let i = 0; i < menu.length; i++) {
             // todo
             if(i==1){
-                str += `<li class="liout" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a href="#" style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].url}">${menu[i].title}</a></li>`
+                str += `<li class="liout" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a href="#" style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].secondLevelUrl}">${menu[i].childDesc}</a></li>`
             }else{
-                str+=`<li class="liout"><a  data_index="${menu[i].url}">${menu[i].title}</a></li>`
+                str+=`<li class="liout"><a  data_index="${menu[i].secondLevelUrl}">${menu[i].childDesc}</a></li>`
             }
         }
         menuShow.html(str)
