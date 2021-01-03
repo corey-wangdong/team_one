@@ -133,42 +133,47 @@ var headData = [
 // 时政要闻 ------- 开始---------
 var szNewsData = [
   {
-    url:'t=&d=8EE2195F-C79E-0B72-1D9A-FAC07183A98B',
+    url:'fl=aboutDT&s=gydt_gsjj&d=8EE2195F-C79E-0B72-1D9A-FAC07183A98B',
     title:'习近平主持召开中央全面深化改革委员会第十七次会议'
   },
   {
-    url:'t=&d=91C529CE-28BC-036D-0411-60F6E9BC0B37',
+    url:'fl=businessDevelopment&s=jyfz_scjy&d=91C529CE-28BC-036D-0411-60F6E9BC0B37',
     title:'习近平出席中央农村工作会议并发表重要讲话'
   },
   {
-    url:'t=&d=F571FE1B-BF22-43B1-4159-62336E5E9782',
+    url:'fl=businessDevelopment&s=jyfz_scjy&d=F571FE1B-BF22-43B1-4159-62336E5E9782',
     title:'习近平主持中共中央政治局召开民主生活会'
   },
   {
-    url:'t=&d=E8BC534F-D9D8-29A5-EF92-F2C2758C426F',
+    url:'fl=businessDevelopment&s=jyfz_scjy&d=E8BC534F-D9D8-29A5-EF92-F2C2758C426F',
     title:'开局“十四五” 开启新征程——从2020年中央经济'
   },
 ]
 
 // 集团新闻  右边list
-	var jtNewsData = [
-		{
-			url:'t=&d=BA913255-A25A-BFC5-F676-BF7165D6D7CE',
-			title:'集团公司党组传达学习贯彻中央经济工作会议精神'
-		},
-		{
-			url:'t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA',
-			title:'集团公司召开冬季保暖和安全保电工作视频会'
-		},
-		{
-			url:'t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A',
-			title:'邹磊会见中交集团党委书记、董事长、总经理王彤宙'
-		},
-		{
-			url:'t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4',
-			title:'集团公司召开老领导老同志座谈会'
-		},
-	]
+	var jtNewsContentData = {
+    jtNewsTitle:'邹磊率队拜访国家能源局局长章建华',
+    jtNewsContent:'12月29日，集团公司党组书记、董事长邹磊率队拜访国家能源局党组书记、局长章建华，双方就深化落实能源安全新战略，全力保障国家能源安全，推动能源绿色低碳转型发展进行深入交流……',
+    jtNewsUrl:'fl=aboutDT&s=news_sjjs&d=31813797-D510-C7B9-EA94-06EBCA5A11AD',
+    contentData:[
+        {
+          url:'fl=newsCenter&s=news_sjjs&d=BA913255-A25A-BFC5-F676-BF7165D6D7CE',
+          title:'集团公司党组传达学习贯彻中央经济工作会议精神'
+        },
+        {
+          url:'fl=newsCenter&s=news_sjjs&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA',
+          title:'集团公司召开冬季保暖和安全保电工作视频会'
+        },
+        {
+          url:'fl=newsCenter&s=news_sjjs&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A',
+          title:'邹磊会见中交集团党委书记、董事长、总经理王彤宙'
+        },
+        {
+          url:'fl=newsCenter&s=news_sjjs&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4',
+          title:'集团公司召开老领导老同志座谈会'
+        },
+    ]
+  }
 
 var contentData = [
   {
