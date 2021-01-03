@@ -394,7 +394,7 @@ div.kjtd_div{display:none;}
         var str =''
         var getQueryString=window.location.href.split('s=')[1]
         for(var i = 0; i < menu.length; i++) {
-            var s = menu[i].url.split('s=')[1]
+            var s = menu[i].secondLevelUrl.split('s=')[1]
             if(getQueryString.includes(s)){
                 str += `<li class="liout" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a   style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].secondLevelUrl}&fl=${fl}">${menu[i].childDesc}</a></li>`
             }else{
