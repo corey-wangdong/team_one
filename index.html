@@ -145,7 +145,9 @@ function childNews(url){
 
 var newwindowIndex=0;
 function openWin(url){
-	window.open(url  ,'newwindow'+newwindowIndex,'width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0,toolbar=yes,menubar=yes,scrollbars=yes, resizable=yes,location=yes, status=yes');
+	var baseUrl = window.location.href.split('/index.html')[0];
+	var tempUrl = baseUrl+"/index/components/articles.html?"+url; 
+	window.open( tempUrl,'newwindow'+newwindowIndex,'width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0,toolbar=yes,menubar=yes,scrollbars=yes, resizable=yes,location=yes, status=yes');
 	newwindowIndex++;
 	if(newwindowIndex>1000)newwindowIndex=0;
 }
@@ -342,137 +344,43 @@ div.kjtd_div{display:none;}
 <!--时政要闻-->
 	<div class="szBox">
     	<div class="szImg">
-        	<a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_sjjs.html" target="blank">
+        	<a href="./index/components/list.html?s=news_sjjs" target="blank">
     		<img src="./index/images/szyw.png"/>
     		</a></div>
-        <div class="sz">
-        	<ul>
-              
-        	  
-        	  
-        	  
-        	  
-        	  	
-        	  		
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  	  	      		<span><!--12-30-->&bull;</span><a href="./index/components/articles.html">习近平主持召开中央全面深化改革委员会第十七次会议</a>
-        	  	  	    	
-        	  	  	    	
-        	  			</li>
-        	  		
-        	  		
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  	  	      		<span><!--12-29-->&bull;</span><a href="javascript:openNews('t=&d=91C529CE-28BC-036D-0411-60F6E9BC0B37');">习近平出席中央农村工作会议并发表重要讲话</a>
-        	  	  	    	
-        	  	  	    	
-        	  			</li>
-        	  		
-        	  		
-        	  			
-        	  			
-        	  			<li>
-        	  				
-        	  	  	      		<span><!--12-25-->&bull;</span><a href="javascript:openNews('t=&d=F571FE1B-BF22-43B1-4159-62336E5E9782');">习近平主持中共中央政治局召开民主生活会</a>
-        	  	  	    	
-        	  	  	    	
-        	  			</li>
-        	  		
-        	  		
-        	  			
-        	  			
-        	  				
-        	  			
-        	  			<li>
-        	  				
-        	  	  	      		<span><!--12-20-->&bull;</span><a href="javascript:openNews('t=&d=E8BC534F-D9D8-29A5-EF92-F2C2758C426F');">开局“十四五” 开启新征程——从2020年中央经济</a>
-        	  	  	    	
-        	  	  	    	
-        	  			</li>
-        	  		
-        	  	
-        	  
-            </ul>
+        <div class="sz" id="szyw">
+        	<ul></ul>
         </div>
-        <div class="arrow"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_sjjs.html" target="blank"><img src="./index/images/arrow.jpg"/></a></div>
+        <div class="arrow"><a href="./index/components/list.html?s=news_sjjs" target="blank"><img src="./index/images/arrow.jpg"/></a></div>
   	</div>
   	</div>
 <!--集团新闻-->
   	<div class="jtBox" style="height:520px;">
     	<div class="tltBox" style="width:1130px; position:relative;">
-        	<div class="tlt_1"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_dtyw.html" target="blank"><font color="#c10000">集团</font><font color="#000">新闻</font></a></div>
+        	<div class="tlt_1"><a href="./index/components/list.html?s=news_dtyw" target="blank"><font color="#c10000">集团</font><font color="#000">新闻</font></a></div>
         	
-            <div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_dtyw.html" target="blank">更多 &gt;</a></div>
+            <div class="more"><a href="./index/components/list.html?s=news_dtyw" target="blank">更多 &gt;</a></div>
     	</div>
         <div class="jtImg" >
         <script type="text/javascript">var rotaionArr= new Array();</script>
-		<div class="yx-rotaion" style="height:435px;">
+		<div id="yx-rotaion" class="yx-rotaion" style="height:435px;">
 			<ul class="rotaion_list">
+				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426';</script>
+				<li><a href="javascript:openWin('action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426')"><img src="./index/Image/yuantu_202012301421461924160092.jpg" alt="国务院国资委副主任袁野到中国大唐调研指导冬季..."></a></li>
+				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C';</script>
+
+				<li><a href="javascript:openWin('action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C')"><img src="./index/Image/yuantu_20201228173048-568630772.jpg" alt="集团公司传达学习贯彻中央企业负责人会议精神"></a></li>
+				
+				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4';</script>
+				
+				<li><a href="javascript:openWin('action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4')"><img src="./index/Image/yuantu_20201230140925-1425370881.jpg" alt="迎新年 谋发展｜集团公司召开老领导老同志座谈..."></a></li>
+				
+				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A';</script>
+				
+				<li><a href="javascript:openWin('action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A')"><img src="./index/Image/yuantu_20201230140547-444292346.jpg" alt="邹磊会见中交集团党委书记、董事长、总经理王彤..."></a></li>
+				
+				<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA';</script>
 			
-			
-			
-			<script type="text/javascript">rotaionArr[rotaionArr.length]= 'http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426';</script>
-			<!--
-			-->
-			
-			
-			
-			
-	
-			<li><a href="javascript:openWin('http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426')"><img src="./index/Image/yuantu_202012301421461924160092.jpg" alt="国务院国资委副主任袁野到中国大唐调研指导冬季..."></a></li>
-			
-			
-			
-			<script type="text/javascript">rotaionArr[rotaionArr.length]= 'http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C';</script>
-			<!--
-			-->
-			
-			
-	
-			<li><a href="javascript:openWin('http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C')"><img src="./index/Image/yuantu_20201228173048-568630772.jpg" alt="集团公司传达学习贯彻中央企业负责人会议精神"></a></li>
-			
-			
-			
-			<script type="text/javascript">rotaionArr[rotaionArr.length]= 'http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4';</script>
-			<!--
-			-->
-			
-			
-			
-			
-	
-			<li><a href="javascript:openWin('http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4')"><img src="./index/Image/yuantu_20201230140925-1425370881.jpg" alt="迎新年 谋发展｜集团公司召开老领导老同志座谈..."></a></li>
-			
-			
-			
-			<script type="text/javascript">rotaionArr[rotaionArr.length]= 'http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A';</script>
-			<!--
-			-->
-			
-			
-			
-			
-	
-			<li><a href="javascript:openWin('http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A')"><img src="./index/Image/yuantu_20201230140547-444292346.jpg" alt="邹磊会见中交集团党委书记、董事长、总经理王彤..."></a></li>
-			
-			
-			
-			<script type="text/javascript">rotaionArr[rotaionArr.length]= 'http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA';</script>
-			<!--
-			-->
-			
-			
-	
-			<li><a href="javascript:openWin('http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA')"><img src="./index/Image/yuantu_202012300911101677904464.jpg" alt="集团公司召开冬季保暖和安全保电工作视频会"></a></li>
-			
-			
-			
-			
+				<li><a href="javascript:openWin('action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA')"><img src="./index/Image/yuantu_202012300911101677904464.jpg" alt="集团公司召开冬季保暖和安全保电工作视频会"></a></li>
 			
 			</ul>
 		</div>
@@ -484,12 +392,7 @@ div.kjtd_div{display:none;}
             <h2>12月29日，集团公司党组书记、董事长邹磊率队拜访国家能源局党组书记、局长章建华，双方就深化落实能源安全新战略，全力保障国家能源安全，推动能源绿色低碳转型发展进行深入交流……<a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');" class="detailLink">[详情]</a>
     	  				</h2>	
     	
-        	<ul style="margin-top: 10px;">
-        	  			<li>
-        	  	  	  	    <a href="javascript:openNews('t=&d=BA913255-A25A-BFC5-F676-BF7165D6D7CE');">集团公司党组传达学习贯彻中央经济工作会议精神</a>
-        	  			</li>
-        	  			
-            </ul>
+        	<ul style="margin-top: 10px;"></ul>
         </div>
   	</div>
 <!--公示公告-->   
@@ -518,88 +421,6 @@ div.kjtd_div{display:none;}
             	<div class="more"><a href="./index/components/list.html?s=news_dtwt" target="blank">更多 &gt;</a></div>
     		</div>
             <ul></ul>
-        </div>
-    </div>
-<!--专题报道  最美大唐人-->    
-    <div class="Box1">
-    	<!--专题-->
-    	<div class="ztLeft">
-    		<div class="tlt_2Box">
-       			<div class="tlt_2"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_ztjj.html" target="blank"><font color="#c10000">专题</font><font color="#000">报道</font></a></div>
-           		<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_ztjj.html" target="blank">更多 &gt;</a></div>
-    		</div>
-    		  
-       		
-       		<div class="ztBig">
-       		<ul>
-       		<li style="border: 0px solid #d1d1d1;">
-       		<a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_wzqh.html" target="_blank"><img style="width:380px; height:96px; border: 0px solid #d1d1d1; " src="./index/images/wzqh.jpg"></a>
-       		<a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_jjgz.html" target="_blank"><img style="width:380px; height:96px; border: 0px solid #d1d1d1; " src="./index/images/gzdt.jpg"></a>
-       		
-            </li>
-            
-            <li style="border: 0px solid #d1d1d1;    margin: 0;">
-            <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showzhuanti&mark=zhuanti_2020tpgj" target="_blank"><img style="width:380px; height:96px; border: 0px solid #d1d1d1; " src="./index/images/tpgj.jpg"></a>
-       		<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showzhuanti&mark=zhuanti_kjyq" target="_blank"><img style="width:380px; height:96px; border: 0px solid #d1d1d1; " src="./index/images/kjyq.jpg"></a>
-       		
-            </li>
-         <!--   
-       		
-            
-            <li style="margin: 0;"><img src="./index/Image/yuantu_202009031020291944234658.jpg"  onclick="openWin('http://www.china-cdt.com/dtwz/indexAction.ndo?action=showzhuanti&mark=zhuanti_2020tpgj')"/></li>
-            
-             -->
-            </ul>
-            </div>
-            <ul>
-       		<!--
-       			  	       
-        	  	  	   <li><img src="./index/Image/yuantu_20200903104010-671085828.jpg"  onclick="openWin('http://www.china-cdt.com/dtwz/showNewsInYearList/index_news&s=news_snxd.html')"/></li>
-       		-->
-             <!-- 
-        	  
-        	  
-        	  
-        	  
-        	  	  
-        	  	       
-        	  	  	   <li><img src="./index/Image/yuantu_20200530182846-1166417558.jpg"  onclick="openWin('http://www.china-cdt.com/dtwz/indexAction.ndo?action=showzhuanti&mark=zhuanti_2020gzhy')"/></li>
-        	  	  
-        	  -->
-            	<li><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_djgz.html" target="_blank"><img src="./index/images/zt_03.jpg"></a></li>
-            	<li><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_tszs.html" target="_blank"><img src="./index/images/zt_ts.jpg"></a></li>
-            	<li style="margin:0;"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_snxd.html" target="_blank"><img src="./index/images/snxd.jpg"></a></li>
-            	<!--<li style="margin:0;"><a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showzhuanti&mark=zhuanti_2020xfr" target="_blank"><img src="./images/gjxfr.jpg"></a></li>-->
-            </ul>
-        </div>
-        <!--最美大唐人-->
-        <div class="ztRight">
-    		<div class="tlt_2Box">
-       			<div class="tlt_2"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_zmdtr.html" target="blank"><font color="#c10000">最美</font><font color="#000">大唐人</font></a></div>
-           		<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showNewsInYearList/index_news&s=news_zmdtr.html" target="blank">更多 &gt;</a></div>
-    		</div>
-            <table width="375" border="0" cellspacing="0" cellpadding="0">
-            	<tr>
-            
-       		
-       		
-            	<td><a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=2E7A632C-1590-78EB-EEAA-3B85A958AC26" target="_blank"><img src="./index/Image/20201223103732-1516268845.png" width="125" height="143"/></a></td>
-            
-            	<td><a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=6AE78B92-71DA-2598-B8E4-933002B2C635" target="_blank"><img src="./index/Image/20201222144058-424576185.png" width="125" height="143"/></a></td>
-            
-            	<td><a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=398A5F4F-BEFF-5CD9-6B38-6A9B0CAB869D" target="_blank"><img src="./index/Image/20201130154229-1665687797.png" width="125" height="143"/></a></td>
-            
-            	</tr>
-            	<tr>
-            
-            	<td><a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=02954BE0-E632-18DF-86F8-CC58BB09BD58" target="_blank"><img src="./index/Image/202011241551072121083581.png" width="125" height="143"/></a></td>
-            
-            	<td><a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=2C11DA45-A049-F751-07AA-F6A4870D0C3F" target="_blank"><img src="./index/Image/20201102135459-1662804802.png" width="125" height="143"/></a></td>
-            
-            	<td><a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=DB2C9F0A-464D-8896-7E59-577DC530A808" target="_blank"><img src="./index/Image/20201110134938-133273116.png" width="125" height="143"/></a></td>
-            
-            	</tr>
-            </table>
         </div>
     </div>
 <!--深度报道  媒体关注  幸福大唐-->
@@ -850,12 +671,12 @@ var topHead = $('.tmenubg')
 
 
 // openNews 共有方法
-function getBoxDataList (boxDom,dataList) {
+function getBoxDataList (boxDom,dataList,content) {
 	var tempDom= $(boxDom);
 	if (!tempDom || dataList.length === 0) return;
 	listStr = '';
 	for(var i=0; i < dataList.length; i++) {
-		listStr += `<li><a data-url='${dataList[i].url}' href="#">${dataList[i].title}</a></li>`
+		listStr += `<li>${content ? content : ''}<a data-url='${dataList[i].url}' href="#">${dataList[i].title}</a></li>`
 	}
 	tempDom.html(listStr);
 	tempDom.click(function(e) {
@@ -866,7 +687,47 @@ function getBoxDataList (boxDom,dataList) {
 	})
 }
 
+function getBannerDataList (boxDom,dataList) {
+	var tempDom= $(boxDom);
+	if (!tempDom || dataList.length === 0) return;
+	listStr = '';
+	for(var i=0; i < dataList.length; i++) {
+		listStr += `<li><a href="javascript:openWin('${dataList[i].url}')"><img src='${dataList[i].imgUrl}' alt="${dataList[i].imgAlt}"></a></li>`
+	}
+	tempDom.html(listStr);
+	tempDom.click(function(e) {
+		console.log(e.target.tagName)
+			if(e.target.tagName.toLowerCase()=='a'){
+				openNews($(e.target).attr('data-url')) 
+			}
+	})
+}
+// 时政要闻 ------- 开始---------
+	var szNewsData = [
+		{
+			url:'t=&d=8EE2195F-C79E-0B72-1D9A-FAC07183A98B',
+			title:'习近平主持召开中央全面深化改革委员会第十七次会议'
+		},
+		{
+			url:'t=&d=91C529CE-28BC-036D-0411-60F6E9BC0B37',
+			title:'习近平出席中央农村工作会议并发表重要讲话'
+		},
+		{
+			url:'t=&d=F571FE1B-BF22-43B1-4159-62336E5E9782',
+			title:'习近平主持中共中央政治局召开民主生活会'
+		},
+		{
+			url:'t=&d=E8BC534F-D9D8-29A5-EF92-F2C2758C426F',
+			title:'开局“十四五” 开启新征程——从2020年中央经济'
+		},
+	]
+	getBoxDataList('#szyw ul',szNewsData,'<span><!--12-30-->&bull;</span>')
+
+// 时政要闻 ------- 结束---------
+
 // 集团新闻  ------- 开始---------
+
+	// 2. 右边list
 	var jtNewsData = [
 		{
 			url:'t=&d=BA913255-A25A-BFC5-F676-BF7165D6D7CE',
