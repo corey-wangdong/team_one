@@ -32,7 +32,9 @@
 <script type="text/javascript" src="./otherResource/jqueryPlugin/jquery.vticker-min.js"></script>
 
 <script language=javascript type="text/javascript" src="./index/js/layer.js"></script>
+
 <script src="./index/utils/mockData.js"></script>
+<script src="./index/utils/getBoxDataList.js"></script>
 <!--屏幕分辨率高度800以下的设置-->
 <link rel="stylesheet" id="sc" type="text/css" href=""/>
 
@@ -398,210 +400,163 @@ div.kjtd_div{display:none;}
 <!--公示公告-->   
   <div class="NtcBox"    style="height:0px;">
 
-    </div>
-<!--系统动态  基层简讯  一线故事-->    
-	<div class="Box1">
-    	<div class="Box3" id="xtdt">
-    		<div class="tltBox">
-        		<div class="tlt_1"><a href="./index/components/list.html?s=index_gydt" target="blank"><font color="#c10000">系统</font><font color="#000">动态</font></a></div>
-            	<div class="more"><a href="./index/components/list.html?s=index_gydt" target="blank">更多 &gt;</a></div>
-    		</div>
-            <ul></ul>
-        </div>
-    	<div class="Box3" id='jcjx'>
-    		<div class="tltBox">
-        		<div class="tlt_1"><a href="./index/components/list.html?s=news_jcjx" target="blank"><font color="#c10000">基层</font><font color="#000">简讯</font></a></div>
-            	<div class="more"><a href="./index/components/list.html?s=news_jcjx" target="blank">更多 &gt;</a></div>
-    		</div>
-            <ul></ul>
-        </div>
-    	<div class="Box3" id='yxgs' style="margin:0;">
-    		<div class="tltBox">
-        		<div class="tlt_1"><a href="./index/components/list.html?s=news_dtwt" target="blank"><font color="#c10000">一线</font><font color="#000">故事</font></a></div>
-            	<div class="more"><a href="./index/components/list.html?s=news_dtwt" target="blank">更多 &gt;</a></div>
-    		</div>
-            <ul></ul>
-        </div>
-    </div>
-<!--深度报道  媒体关注  幸福大唐-->
-	<div class="Box1">
-    	<div class="Box3" id='sdbd'>
-    		<div class="tltBox">
-        		<div class="tlt_1"><a href="./index/components/list.html?s=news_sdbd" target="blank"><font color="#c10000">深度</font><font color="#000">报道</font></a></div>
-            	<div class="more"><a href="./index/components/list.html?s=news_sdbd" target="blank">更多 &gt;</a></div>
-    		</div>
-            <ul></ul>
-        </div>
-    	<div class="Box3" id='mtgz'>
-    		<div class="tltBox">
-        		<div class="tlt_1"><a href="./index/components/list.html?s=news_mtgz" target="blank"><font color="#c10000">媒体</font><font color="#000">关注</font></a></div>
-            	<div class="more"><a href="./index/components/list.html?s=news_mtgz" target="blank">更多 &gt;</a></div>
-    		</div>
-            <ul></ul>
-        </div>
-    	<div class="Box3" id='xfdt' style="margin:0;">
-    		<div class="tltBox">
-        		<div class="tlt_1"><a href="./index/components/list.html?s=news_xfdt" target="blank"><font color="#c10000">幸福</font><font color="#000">大唐</font></a></div>
-            	<div class="more"><a href="./index/components/list.html?s=news_xfdt" target="blank">更多 &gt;</a></div>
-    		</div>
-            <ul></ul>
-        </div>
-    </div>
-    <div class="xcfc">
-        	<!--现场风采 内容-->
-            <div class="xcfc01">
-                <div class="tlt_2"><a href="http://www.china-cdt.com:80/dtwz/showImgList/index_news&s=news_tpxw.html" target="_blank"><font color="#c10000">现场</font><font color="#000">风采</font></a></div>
-           	<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showImgList/index_news&s=news_tpxw.html" target="_blank">更多 &gt;</a></div>
-        	</div>
-        	<div class="xcfc_sliderDiv">
-        	<ul class="xcfc_bxslider">
-        	
-       		
-       		
-         	
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=E25DEB57-ECB6-9802-072E-DDC43EDD5480" target="_blank">
-	      			<img src="./index/Image/202012311123591242071786.png"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=E25DEB57-ECB6-9802-072E-DDC43EDD5480" target="_blank">【职工随手拍】中南院：遇“健”</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=32F08AB5-946E-498C-EF1C-119FC5D43BAF" target="_blank">
-	      			<img src="./index/Image/20201231105451290919686.png"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=32F08AB5-946E-498C-EF1C-119FC5D43BAF" target="_blank">【职工随手拍】神头发电公司：决</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=ECFD982B-7D42-D738-492D-372292445D38" target="_blank">
-	      			<img src="./index/Image/20201230080206-1861011653.png"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=ECFD982B-7D42-D738-492D-372292445D38" target="_blank">【职工随手拍】滨州发电公司：全</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=282FB5B1-CBDA-F2B6-0C36-B065DEF981F5" target="_blank">
-	      			<img src="./index/Image/20201228133041-325883950.jpg"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=282FB5B1-CBDA-F2B6-0C36-B065DEF981F5" target="_blank">【职工随手拍】耒阳发电公司：退</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=784551C1-BDE9-6965-0BB7-AA1337BE4612" target="_blank">
-	      			<img src="./index/Image/20201228081316-1833455328.png"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=784551C1-BDE9-6965-0BB7-AA1337BE4612" target="_blank">【职工随手拍】内蒙古分公司：迎</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=5BF338CE-A913-DDBF-8AC4-B4A4699D3B34" target="_blank">
-	      			<img src="./index/Image/202012231345151448423769.jpg"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=5BF338CE-A913-DDBF-8AC4-B4A4699D3B34" target="_blank">【职工随手拍】托克托发电公司：</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=D24FCFC0-1FBC-E216-D90E-70D39E302FF1" target="_blank">
-	      			<img src="./index/Image/20201222152459-993324097.jpg"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=D24FCFC0-1FBC-E216-D90E-70D39E302FF1" target="_blank">【职工随手拍】集团公司：举办“</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=28908D6F-2A1C-0B83-CDAE-9D91F843C7B1" target="_blank">
-	      			<img src="./index/Image/202012181058441053159924.JPG"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=28908D6F-2A1C-0B83-CDAE-9D91F843C7B1" target="_blank">【职工随手拍】华东院：青春力量</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=CFBC3C5A-F746-E64D-B622-029989A53CF0" target="_blank">
-	      			<img src="./index/Image/202012171335472017414559.jpg"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=CFBC3C5A-F746-E64D-B622-029989A53CF0" target="_blank">【职工随手拍】龙滩水电厂：召开</a>
-	      		  </div>
-	      		</li>
-            
-           
-           
-             
-			 
-			 
-            	<li>
-            	  <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=90F0E18B-E885-C00B-B309-3420AE55BE70" target="_blank">
-	      			<img src="./index/Image/202012151340451676755947.JPG"/>      			
-	      		  </a>
-	      		  <div class="fcZi">
-	      		    <a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=90F0E18B-E885-C00B-B309-3420AE55BE70" target="_blank">【职工随手拍】郓城发电公司：深</a>
-	      		  </div>
-	      		</li>
-            
-			</ul>
-       </div>
-        </div>
+	</div>
+	<div id='contentShow'></div>
+	<div class="xcfc">
+		<!--现场风采 内容-->
+		<div class="xcfc01">
+			<div class="tlt_2"><a href="http://www.china-cdt.com:80/dtwz/showImgList/index_news&s=news_tpxw.html" target="_blank"><font color="#c10000">现场</font><font color="#000">风采</font></a></div>
+		<div class="more"><a href="http://www.china-cdt.com:80/dtwz/showImgList/index_news&s=news_tpxw.html" target="_blank">更多 &gt;</a></div>
+		</div>
+		<div class="xcfc_sliderDiv">
+		<ul class="xcfc_bxslider">
+		
+		
+		
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=E25DEB57-ECB6-9802-072E-DDC43EDD5480" target="_blank">
+				<img src="./index/Image/202012311123591242071786.png"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=E25DEB57-ECB6-9802-072E-DDC43EDD5480" target="_blank">【职工随手拍】中南院：遇“健”</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=32F08AB5-946E-498C-EF1C-119FC5D43BAF" target="_blank">
+				<img src="./index/Image/20201231105451290919686.png"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=32F08AB5-946E-498C-EF1C-119FC5D43BAF" target="_blank">【职工随手拍】神头发电公司：决</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=ECFD982B-7D42-D738-492D-372292445D38" target="_blank">
+				<img src="./index/Image/20201230080206-1861011653.png"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=ECFD982B-7D42-D738-492D-372292445D38" target="_blank">【职工随手拍】滨州发电公司：全</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=282FB5B1-CBDA-F2B6-0C36-B065DEF981F5" target="_blank">
+				<img src="./index/Image/20201228133041-325883950.jpg"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=282FB5B1-CBDA-F2B6-0C36-B065DEF981F5" target="_blank">【职工随手拍】耒阳发电公司：退</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=784551C1-BDE9-6965-0BB7-AA1337BE4612" target="_blank">
+				<img src="./index/Image/20201228081316-1833455328.png"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=784551C1-BDE9-6965-0BB7-AA1337BE4612" target="_blank">【职工随手拍】内蒙古分公司：迎</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=5BF338CE-A913-DDBF-8AC4-B4A4699D3B34" target="_blank">
+				<img src="./index/Image/202012231345151448423769.jpg"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=5BF338CE-A913-DDBF-8AC4-B4A4699D3B34" target="_blank">【职工随手拍】托克托发电公司：</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=D24FCFC0-1FBC-E216-D90E-70D39E302FF1" target="_blank">
+				<img src="./index/Image/20201222152459-993324097.jpg"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=D24FCFC0-1FBC-E216-D90E-70D39E302FF1" target="_blank">【职工随手拍】集团公司：举办“</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=28908D6F-2A1C-0B83-CDAE-9D91F843C7B1" target="_blank">
+				<img src="./index/Image/202012181058441053159924.JPG"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=28908D6F-2A1C-0B83-CDAE-9D91F843C7B1" target="_blank">【职工随手拍】华东院：青春力量</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=CFBC3C5A-F746-E64D-B622-029989A53CF0" target="_blank">
+				<img src="./index/Image/202012171335472017414559.jpg"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=CFBC3C5A-F746-E64D-B622-029989A53CF0" target="_blank">【职工随手拍】龙滩水电厂：召开</a>
+			</div>
+			</li>
+		
+	
+	
+		
+		
+		
+			<li>
+			<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=90F0E18B-E885-C00B-B309-3420AE55BE70" target="_blank">
+				<img src="./index/Image/202012151340451676755947.JPG"/>      			
+			</a>
+			<div class="fcZi">
+				<a href="http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&d=90F0E18B-E885-C00B-B309-3420AE55BE70" target="_blank">【职工随手拍】郓城发电公司：深</a>
+			</div>
+			</li>
+		
+		</ul>
+</div>
+	</div>
 </div>
 </div>
 <br />
@@ -783,26 +738,6 @@ var topHead = $('.tmenubg')
 			},function(){ 
 				myIntFlag = jjgzInterval();
 			});
-		/*
-		var centerImg1 = './index/Image/yuantu_20150605145133-1391236196.jpg';
-    	var centerImg2 = './index/Image/yuantu_20150205223006-1786289231.jpg';
-    	var centerUrl = $('#lan_ad a').attr("href");
-    	var centerFlag = true;
-			function showcenter(){
-				if(centerFlag){
-					$('#lan_ad a').attr("href","http://www.china-cdt.com/dtwz//indexAction.ndo?action=showzhuanti&mark=zhuanti_syss");
-					$('#lan_ad a').attr("target","_blank");
-					$('#lan_ad a img').attr("src",centerImg1);
-					centerFlag = false;
-				}else{
-					//$('#lan_ad a').attr("href",centerUrl);
-					$('#lan_ad a').attr("href","http://www.china-cdt.com/dtwz//indexAction.ndo?action=showzhuanti&mark=zhuanti_lzys");
-					$('#lan_ad a').attr("target","_blank");
-					$('#lan_ad a img').attr("src",centerImg2);
-					centerFlag = true;
-				}
-			}
-		*/
 		function scrollCenterImages(){
 			var indexBGImg_Photos_index = 0;
 			if(centerImageArray.length>1){
@@ -906,171 +841,15 @@ var topHead = $('.tmenubg')
     }
 })(jQuery);
 
-
-// openNews 共有方法
-function getBoxDataList (boxDom,dataList,content) {
-	var tempDom= $(boxDom);
-	if (!tempDom || dataList.length === 0) return;
-	listStr = '';
-	for(var i=0; i < dataList.length; i++) {
-		listStr += `<li>${content ? content : ''}<a data-url='${dataList[i].url}' href="#">${dataList[i].title}</a></li>`
-	}
-	tempDom.html(listStr);
-	tempDom.click(function(e) {
-		console.log(e.target.tagName)
-			if(e.target.tagName.toLowerCase()=='a'){
-				openNews($(e.target).attr('data-url')) 
-			}
-	})
-}
-
-function getBannerDataList (boxDom,dataList) {
-	var tempDom= $(boxDom);
-	if (!tempDom || dataList.length === 0) return;
-	listStr = '';
-	for(var i=0; i < dataList.length; i++) {
-		listStr += `<li><a href="javascript:openWin('${dataList[i].url}')"><img src='${dataList[i].imgUrl}' alt="${dataList[i].imgAlt}"></a></li>`
-	}
-	tempDom.html(listStr);
-	tempDom.click(function(e) {
-		console.log(e.target.tagName)
-			if(e.target.tagName.toLowerCase()=='a'){
-				openNews($(e.target).attr('data-url')) 
-			}
-	})
-}
-// 时政要闻 ------- 开始---------
-	var szNewsData = [
-		{
-			url:'t=&d=8EE2195F-C79E-0B72-1D9A-FAC07183A98B',
-			title:'习近平主持召开中央全面深化改革委员会第十七次会议'
-		},
-		{
-			url:'t=&d=91C529CE-28BC-036D-0411-60F6E9BC0B37',
-			title:'习近平出席中央农村工作会议并发表重要讲话'
-		},
-		{
-			url:'t=&d=F571FE1B-BF22-43B1-4159-62336E5E9782',
-			title:'习近平主持中共中央政治局召开民主生活会'
-		},
-		{
-			url:'t=&d=E8BC534F-D9D8-29A5-EF92-F2C2758C426F',
-			title:'开局“十四五” 开启新征程——从2020年中央经济'
-		},
-	]
-	getBoxDataList('#szyw ul',szNewsData,'<span><!--12-30-->&bull;</span>')
-
-// 时政要闻 ------- 结束---------
+// 时政要闻 ----------------
+	getDataList('#szyw ul',szNewsData,'<span><!--12-30-->&bull;</span>')
 
 // 集团新闻  ------- 开始---------
-
 	// 2. 右边list
-	var jtNewsData = [
-		{
-			url:'t=&d=BA913255-A25A-BFC5-F676-BF7165D6D7CE',
-			title:'集团公司党组传达学习贯彻中央经济工作会议精神'
-		},
-		{
-			url:'t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA',
-			title:'集团公司召开冬季保暖和安全保电工作视频会'
-		},
-		{
-			url:'t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A',
-			title:'邹磊会见中交集团党委书记、董事长、总经理王彤宙'
-		},
-		{
-			url:'t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4',
-			title:'集团公司召开老领导老同志座谈会'
-		},
-	]
-	getBoxDataList('.jtNews ul',jtNewsData)
-// 集团新闻  ------- 结束---------
+	getDataList('.jtNews ul',jtNewsData)
 
 // 系统动态  基层简讯  一线故事 ------- 开始---------
-
-	//1. 系统动态
-	var xtdtNewsData = [
-		{
-			url:'t=&d=AFA02F4A-AAEE-6AE7-DD45-FE0AD7D4D8CF',
-			title:'黑龙江公司：打造民生“暖屋子”'
-		},
-		{
-			url:'t=&d=DF8C8F04-E618-97BE-973A-B0E3BF05CAC2',
-			title:'江苏公司：以考促学提升素质能力'
-		}
-	]
-	getBoxDataList('#xtdt ul',xtdtNewsData)
-	
-	//2. 基层简讯
-	var jcjxNewsData = [
-		{
-			url:'t=&d=26CDA4D7-EE64-6E57-8373-9BF5AF3EE652',
-			title:'张家口热电公司优质大唐热应对极寒天”'
-		},
-		{
-			url:'t=&d=1EE40DCB-381D-D2AA-5CC9-0037823239D6',
-			title:'桂冠山东分公司：全面启动防寒潮保发电模式'
-		}
-	]
-	getBoxDataList('#jcjx ul',jcjxNewsData)
-
-	//3. 一线故事
-	var yxgsNewsData = [
-		{
-			url:'t=&d=D2EC3DC8-022C-28E5-BB04-50879B55D848',
-			title:'锅炉“铁军”'
-		},
-		{
-			url:'t=&d=EB735D1E-A4E7-ADE0-ED87-0E5B387C91DF',
-			title:'“疫”刻不停保供电'
-		}
-	]
-	getBoxDataList('#yxgs ul',yxgsNewsData)
-
-// 系统动态  基层简讯  一线故事 ------- 结束---------  
-
-// 深度报道  媒体关注  幸福大唐 ------- 开始---------  
-
-	//1. 深度报道
-	var sdbdNewsData = [
-		{
-			url:'t=&d=3893F3B6-4FCD-9E8D-8534-833A1A1A5F26',
-			title:'湖南分公司：战寒潮　顶负荷　全力保发电'
-		},
-		{
-			url:'t=&d=214A9209-1676-E359-5634-C354B8D89EDC',
-			title:'【全国青年安全生产示范岗】锦州热电公司：青春为伴　砥'
-		}
-	]
-	getBoxDataList('#sdbd ul',sdbdNewsData)
-	
-	//2. 媒体关注
-	var mtgzNewsData = [
-		{
-			url:'t=&d=67628C9F-F62E-7681-DE39-28186D01D7B1',
-			title:'[新华网]中国大唐召开党组会议专题研究全面从严治党工'
-		},
-		{
-			url:'t=&d=7B3DA692-27EB-FFF9-F924-645BDF5DC378',
-			title:'[中国能源网]中国大唐召开党组会议专题研究全面从严治'
-		}
-	]
-	getBoxDataList('#mtgz ul',mtgzNewsData)
-
-	//3. 幸福大唐
-	var xfdtNewsData = [
-		{
-			url:'t=&d=F9EE024E-3CAD-CC21-059A-1D074701CA98',
-			title:'江山公司：为幸福+1度'
-		},
-		{
-			url:'t=&d=8A6B3A2D-526D-84B7-3DE2-542722732040',
-			title:'三门峡发电公司：幸福来敲门'
-		}
-	]
-	getBoxDataList('#xfdt ul',xfdtNewsData)
-
-// 深度报道  媒体关注  幸福大唐 ------- 结束---------  
+	getBoxDataList('#contentShow',contentData)
 
 </script>
 <iframe  scrolling="no" frameborder="0" height="220" width="100%" src="./bottom.html" ></iframe>
