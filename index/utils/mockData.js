@@ -180,11 +180,11 @@ var contentData = [
     },
     newsData:[
       {
-        url:'fl=aboutDT&d=AFA02F4A-AAEE-6AE7-DD45-FE0AD7D4D8CF',
+        url:'fl=aboutDT&s=gydt_gsjj&d=AFA02F4A-AAEE-6AE7-DD45-FE0AD7D4D8CF',
         title:'黑龙江公司：打造民生“暖屋子”'
       },
       {
-        url:'fl=aboutDT&d=DF8C8F04-E618-97BE-973A-B0E3BF05CAC2',
+        url:'fl=aboutDT&s=gydt_gsjj&d=DF8C8F04-E618-97BE-973A-B0E3BF05CAC2',
         title:'江苏公司：以考促学提升素质能力'
       }
     ]
@@ -198,11 +198,11 @@ var contentData = [
     },
     newsData:[
       {
-        url:'fl=businessDevelopment&d=26CDA4D7-EE64-6E57-8373-9BF5AF3EE652',
+        url:'fl=businessDevelopment&s=jyfz_scjy&d=26CDA4D7-EE64-6E57-8373-9BF5AF3EE652',
         title:'张家口热电公司优质大唐热应对极寒天”'
       },
       {
-        url:'fl=businessDevelopment&d=1EE40DCB-381D-D2AA-5CC9-0037823239D6',
+        url:'fl=businessDevelopment&s=jyfz_scjy&d=1EE40DCB-381D-D2AA-5CC9-0037823239D6',
         title:'桂冠山东分公司：全面启动防寒潮保发电模式'
       }
     ]
@@ -216,11 +216,11 @@ var contentData = [
     },
     newsData:[
       {
-        url:'fl=newsCenter&d=D2EC3DC8-022C-28E5-BB04-50879B55D848',
+        url:'fl=newsCenter&s=news_sjjs&d=D2EC3DC8-022C-28E5-BB04-50879B55D848',
         title:'锅炉“铁军”'
       },
       {
-        url:'fl=newsCenter&d=EB735D1E-A4E7-ADE0-ED87-0E5B387C91DF',
+        url:'fl=newsCenter&s=news_sjjs&d=EB735D1E-A4E7-ADE0-ED87-0E5B387C91DF',
         title:'“疫”刻不停保供电'
       }
     ]
@@ -234,11 +234,11 @@ var contentData = [
     },
     newsData:[
       {
-        url:'fl=InvestorRelations&d=3893F3B6-4FCD-9E8D-8534-833A1A1A5F26',
+        url:'fl=InvestorRelations&s=index_tzzgx&d=3893F3B6-4FCD-9E8D-8534-833A1A1A5F26',
         title:'湖南分公司：战寒潮　顶负荷　全力保发电'
       },
       {
-        url:'fl=InvestorRelations&d=214A9209-1676-E359-5634-C354B8D89EDC',
+        url:'fl=InvestorRelations&s=index_tzzgx&d=214A9209-1676-E359-5634-C354B8D89EDC',
         title:'【全国青年安全生产示范岗】锦州热电公司：青春为伴　砥'
       }
     ]
@@ -252,11 +252,11 @@ var contentData = [
     },
     newsData:[
       {
-        url:'fl=socialResponsibility&d=67628C9F-F62E-7681-DE39-28186D01D7B1',
+        url:'fl=socialResponsibility&s=shzr_shzrbg&qywh_qykfrd=67628C9F-F62E-7681-DE39-28186D01D7B1',
         title:'[新华网]中国大唐召开党组会议专题研究全面从严治党工'
       },
       {
-        url:'fl=socialResponsibility&d=7B3DA692-27EB-FFF9-F924-645BDF5DC378',
+        url:'fl=socialResponsibility&s=shzr_shzrbg&d=7B3DA692-27EB-FFF9-F924-645BDF5DC378',
         title:'[中国能源网]中国大唐召开党组会议专题研究全面从严治'
       }
     ]
@@ -270,11 +270,11 @@ var contentData = [
     },
     newsData:[
       {
-        url:'fl=corporateCulture&d=F9EE024E-3CAD-CC21-059A-1D074701CA98',
+        url:'fl=corporateCulture&s=qywh_qykfr&s=index_tzzgx&d=F9EE024E-3CAD-CC21-059A-1D074701CA98',
         title:'江山公司：为幸福+1度'
       },
       {
-        url:'fl=corporateCulture&d=8A6B3A2D-526D-84B7-3DE2-542722732040',
+        url:'fl=corporateCulture&s=qywh_qykfr&s=index_tzzgx&d=8A6B3A2D-526D-84B7-3DE2-542722732040',
         title:'三门峡发电公司：幸福来敲门'
       }
     ]
