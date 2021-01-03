@@ -9,10 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta name="keywords" content="中国大唐集团有限公司" />
 <meta name="description" content="中国大唐集团有限公司"/> 
-<LINK rel=stylesheet type=text/css href="./index/css/menu.css">
-<script type="text/javascript" src="./index/js/jquery1.8.3.min.js"></script>
-<script src="./index/js/link_up.js"></script>
-<SCRIPT type=text/javascript src="./index/js/menu_ie6.js"></SCRIPT>
+<LINK rel=stylesheet type=text/css href="./index/css/menu.css"><!--主菜单样式-->
+<script type="text/javascript" src="./index/js/jquery1.8.3.min.js"></script><!--大banner-js-->
+<script src="./index/js/link_up.js"></script><!--相关链接上拉-->
+<SCRIPT type=text/javascript src="./index/js/menu_ie6.js"></SCRIPT><!--主菜单js-->
 <link type="text/css" href="./index/css/style.css" rel="stylesheet"/>
 <link href="./index/css/focus_pic.css" rel="stylesheet" type="text/css" />
 <link href="./index/js/rotationJs/focus_pic_2.css" rel="stylesheet" type="text/css" />
@@ -22,8 +22,8 @@
 <script language=javascript type="text/javascript" src="./index/js/tab_news.js"></script>
 <script language=javascript type="text/javascript" src="./index/js/tab_link.js"></script>
 
-<link rel="stylesheet" type="text/css" href="./index/css/banpic.css" />
-<script type="text/javascript" src="./index/js/jquery.easing.1.3.js"></script>
+<link rel="stylesheet" type="text/css" href="./index/css/banpic.css" /><!--大banner样式-->
+<script type="text/javascript" src="./index/js/jquery.easing.1.3.js"></script><!--大banner-js-->
 <script type="text/javascript" src="./index/js/strTools.js"></script>
 <script type="text/javascript" src="./index/js/bxslider/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="./otherResource/jqueryPlugin/jquery.vticker-min.js"></script>
@@ -33,164 +33,137 @@
 <script src="./index/utils/mockData.js"></script>
 <script src="./index/utils/getBoxDataList.js"></script>
 <script src="./index/utils/contantMethods.js"></script>
-
+<!--屏幕分辨率高度800以下的设置-->
 <link rel="stylesheet" id="sc" type="text/css" href=""/>
 
 <script type="text/javascript"> 
 
-  window.onload=function(){
+window.onload=function(){
 
-    var userAgentInfo = navigator.userAgent;
-    var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
     var flag = true;
     for (var v = 0; v < Agents.length; v++) {
-      if (userAgentInfo.indexOf(Agents[v]) > 0) {
-        flag = false;
-        break;
-      }
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
     }
-    //如果是手机，则修改body样式
-    if(!flag){
-      $("body").css("width","1400px");
-    }
+//如果是手机，则修改body样式
+if(!flag){
+	$("body").css("width","1400px");
+}
 
-  }
-  //公告滚动js
-  $(function(){
+}
+//公告滚动js
+$(function(){
 
-    $("#ztbd_tab_content>div").vTicker({ 
-        speed: 500,
-        pause: 3000,
-        animation: 'fade',
-        mousePause: true,
-        showItems: 4
-    });
+  $("#ztbd_tab_content>div").vTicker({ 
+      speed: 500,
+      pause: 3000,
+      animation: 'fade',
+      mousePause: true,
+      showItems: 4
   });
+});
 
-  function closeXb_div(){
-    $("#xb_div").fadeOut(1000);
-  }
+function closeXb_div(){
+	$("#xb_div").fadeOut(1000);
+}
 
-  function setlanAd(url,imgSrc){
-    var lan_ad = document.getElementById("lan_ad");
-    if(lan_ad)lan_ad.innerHTML = '<a href="'+url+'"><img src="./index/Image/yuantu_'+imgSrc+'" width="916" height="76" /></a>';
-  }
-  function openNews(url){
-    let baseUrl = window.location.href.split('/index.html')[0];
-    window.location.href = baseUrl+"/index/components/articles.html?"+url;
-  }
+function setlanAd(url,imgSrc){
+	var lan_ad = document.getElementById("lan_ad");
+	if(lan_ad)lan_ad.innerHTML = '<a href="'+url+'"><img src="./index/Image/yuantu_'+imgSrc+'" width="916" height="76" /></a>';
+}
+function openNews(url){
+	let baseUrl = window.location.href.split('/index.html')[0];
+	window.location.href = baseUrl+"/index/components/articles.html?"+url;
+}
 
-  function redirectHomePage(){
-    let baseUrl = window.location.href.split('/index.html')[0];
-    window.location.href = baseUrl+"/index.html";
-  }
+function openMenu(url){
+	let baseUrl = window.location.href.split('/index.html')[0];
+  window.location.href = baseUrl+"/index/components/list.html?"+url;
+}
 
-  function openMenu(url){
-    let baseUrl = window.location.href.split('/index.html')[0];
-    window.location.href = baseUrl+"/index/components/list.html?"+url;
-  }
-
-  function childNews(url){
-    let baseUrl = window.location.href.split('/index.html')[0];
-    window.location.href = baseUrl+"/index/components/articles.html?"+url;	
-  }
-  var newwindowIndex=0;
-  function openWin(url){
-    var baseUrl = window.location.href.split('/index.html')[0];
-    var tempUrl = baseUrl+"/index/components/articles.html?"+url; 
-    window.open( tempUrl,'newwindow'+newwindowIndex,'width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0,toolbar=yes,menubar=yes,scrollbars=yes, resizable=yes,location=yes, status=yes');
-    newwindowIndex++;
-    if(newwindowIndex>1000)newwindowIndex=0;
-  }
-  function search(s){
-    var defaultSeaTime=encode('2017-01-01 01:00:00');
-    var url = "./index/sousuo.jsp?s="+s+"&qy=t&keyWordMh="+encode(gohtmlEncode(document.getElementById("keyWord").value))+"&defaultSeaTime="+defaultSeaTime+"&"+Math.random();
-    openWin(url);
-  }
-  function searchGj(s){
-    var defaultSeaTime=encode('2017-01-01 01:00:00');
-    var url = "./index/sousuo.jsp?s="+s+"&keyWordMh="+encode(gohtmlEncode(document.getElementById("keyWord").value))+"&defaultSeaTime="+defaultSeaTime+"&"+Math.random();
-    openWin(url);
-  }
-  function gohtmlEncode(str) {
-    if(!str)   return str;
-      var finalValue="";
-      for (var i = 0, len = str.length; i < len; i++) {
-        finalValue+=htmlEncode(str.charAt(i));
-      }
-    return finalValue;
-  }
+function childNews(url){
+  let baseUrl = window.location.href.split('/index.html')[0];
+  window.location.href = baseUrl+"/index/components/articles.html?"+url;	
+}
+var newwindowIndex=0;
+function openWin(url){
+	var baseUrl = window.location.href.split('/index.html')[0];
+	var tempUrl = baseUrl+"/index/components/articles.html?"+url; 
+	window.open( tempUrl,'newwindow'+newwindowIndex,'width='+(window.screen.availWidth-10)+',height='+(window.screen.availHeight-30)+ ',top=0,left=0,toolbar=yes,menubar=yes,scrollbars=yes, resizable=yes,location=yes, status=yes');
+	newwindowIndex++;
+	if(newwindowIndex>1000)newwindowIndex=0;
+}
+function search(s){
+	var defaultSeaTime=encode('2017-01-01 01:00:00');
+	var url = "./index/sousuo.jsp?s="+s+"&qy=t&keyWordMh="+encode(gohtmlEncode(document.getElementById("keyWord").value))+"&defaultSeaTime="+defaultSeaTime+"&"+Math.random();
+	openWin(url);
+}
+function searchGj(s){
+	var defaultSeaTime=encode('2017-01-01 01:00:00');
+	var url = "./index/sousuo.jsp?s="+s+"&keyWordMh="+encode(gohtmlEncode(document.getElementById("keyWord").value))+"&defaultSeaTime="+defaultSeaTime+"&"+Math.random();
+	openWin(url);
+}
+function gohtmlEncode(str) {
+        if(!str)   return str;
+        	var finalValue="";
+        	for (var i = 0, len = str.length; i < len; i++) {
+        		finalValue+=htmlEncode(str.charAt(i));
+        	}
+        return finalValue;
+}
     
-  function htmlEncode(c) {
-    switch(c) {
-      case '&':
-          return"&amp;";
-      case '<':
-          return"&lt;";
-      case '>':
-          return"&gt;";
-      case '"':
-          return"&quot;";
-      case '\'':
-        return "&apos;";
-      case ' ':
-          return"&nbsp;";
-      default:
-          return c +"";
-    }
-  }
+function htmlEncode(c) {
+        switch(c) {
+           case '&':
+               return"&amp;";
+           case '<':
+               return"&lt;";
+           case '>':
+               return"&gt;";
+           case '"':
+               return"&quot;";
+           case '\'':
+           	return "&apos;";
+           case ' ':
+               return"&nbsp;";
+           default:
+               return c +"";
+        }
+}
 
-  $(document).ready(function(){
+$(document).ready(function(){
     var ie6=!-[1,]&&!window.XMLHttpRequest;
     if(ie6){
-      $("div.lan_03_list > ul >li.dtwzli >a").each(function(){
-        var tmpText = $(this).text();
-        if(tmpText.length>=20){
-          tmpText = tmpText.substring(0,tmpText.length-1);
-          $(this).text(tmpText);
-        }
-      });
+    	$("div.lan_03_list > ul >li.dtwzli >a").each(function(){
+    		var tmpText = $(this).text();
+    		if(tmpText.length>=20){
+    			tmpText = tmpText.substring(0,tmpText.length-1);
+    			$(this).text(tmpText);
+    		}
+    	});
     }
 
     if($('.xcfc_bxslider img').length>0){
-      $('.xcfc_bxslider').bxSlider({
-        slideWidth: 280,
-        minSlides: 4,
-        maxSlides: 4,
-        speed:30000,
-        ticker: $('.xcfc_bxslider img').length>4?true:false,
-        startSlides: 0, 
-            slideMargin: 30,
-            tickerHover:true,
-            useCSS:false,
-            captions:false
-      });
-    }
-  });
-
-  /*tanglv added 0306*/
-  $(document).ready(function(){
-    
-    $("select.friendlink_select").each(function(){
-      $(this).change(function(){
-          if($(this).val()){
-              window.open($(this).val(),"_blank")
-          }
-      });
-    });
-    $("#ztbd_tab,#kjtd_tab").hover(function(){
-      var curObj = $(this);
-      curObj.addClass("moveover").removeClass("moveout");
-      curObj.siblings().removeClass("moveover").addClass("moveout").each(function(){
-        $("#"+$(this).attr("id")+"_content").stop(true,true).fadeOut(100,function(){
-          $("#"+curObj.attr("id")+"_content").stop(true,true).fadeIn(300);
-        });
-        $("#"+$(this).attr("id")+"_more").stop(true,true).fadeOut(0,function(){
-          $("#"+curObj.attr("id")+"_more").stop(true,true).fadeIn(0);
-        });
-      });
-    });
-  });
+		$('.xcfc_bxslider').bxSlider({
+			slideWidth: 280,
+			minSlides: 4,
+			maxSlides: 4,
+			speed:30000,
+			ticker: $('.xcfc_bxslider img').length>4?true:false,
+			startSlides: 0, 
+	        slideMargin: 30,
+	        tickerHover:true,
+	        useCSS:false,
+	        captions:false
+		});
+	}
+});
 
 </script>
 <style>
@@ -287,14 +260,14 @@ div.kjtd_div{display:none;}
 				<div class="sz" id="szyw">
 					<ul></ul>
 				</div>
-				<div class="arrow"><a href="./index/components/list.html?s=news_sjjs" target="blank"><img src="./index/images/arrow.jpg"/></a></div>
+				<div class="arrow"><a href="javascript:openMenu('fl=newsCenter&s=news_sjjs')"><img src="./index/images/arrow.jpg"/></a></div>
 			</div>
 			</div>
 		<!--集团新闻-->
 			<div class="jtBox" style="height:520px;">
 				<div class="tltBox" style="width:1130px; position:relative;">
-					<div class="tlt_1"><a href="./index/components/list.html?s=news_dtyw" target="blank"><font color="#c10000">集团</font><font color="#000">新闻</font></a></div>     	
-					<div class="more"><a href="./index/components/list.html?s=news_dtyw" target="blank">更多 &gt;</a></div>
+					<div class="tlt_1"><a href="javascript:openMenu('fl=newsCenter&s=news_dtyw')"><font color="#c10000">集团</font><font color="#000">新闻</font></a></div>     	
+					<div class="more"><a href="javascript:openMenu('fl=newsCenter&s=news_dtyw')">更多 &gt;</a></div>
 				</div>
 				<div class="jtImg" >
 				<script type="text/javascript">var rotaionArr= new Array();</script>
@@ -315,14 +288,7 @@ div.kjtd_div{display:none;}
 				</div>
 				<script type="text/javascript" src="./index/js/jquery.yx_rotaion.js"></script>
 				<script type="text/javascript">$(".yx-rotaion").yx_rotaion({auto:true});</script></div>
-				<div class="jtNews">
-							<!---->  	
-					<h1><a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');">邹磊率队拜访国家能源局局长章建华</a></h1>
-					<h2>12月29日，集团公司党组书记、董事长邹磊率队拜访国家能源局党组书记、局长章建华，双方就深化落实能源安全新战略，全力保障国家能源安全，推动能源绿色低碳转型发展进行深入交流……<a href="javascript:openNews('t=&d=31813797-D510-C7B9-EA94-06EBCA5A11AD');" class="detailLink">[详情]</a>
-								</h2>	
-				
-					<ul style="margin-top: 10px;"></ul>
-				</div>
+				<div class="jtNews"></div>
 			</div>
 		<!--公示公告-->   
 		<div class="NtcBox" style="height:0px;">
@@ -333,16 +299,16 @@ div.kjtd_div{display:none;}
 <script type="text/javascript">
 	var centerImageArray = [];
 	var topHead = $('.tmenubg')
-  var currentHeadDom = createdDom(headData, 'head')
-  topHead.html(currentHeadDom);
-  // 时政要闻 ----------------
+  	var currentHeadDom = createdDom(headData, 'head')
+  	topHead.html(currentHeadDom);
+// 时政要闻 ----------------
 	getDataList('#szyw ul',szNewsData,'<span><!--12-30-->&bull;</span>')
 
-  // 集团新闻  ------- 开始---------
+// 集团新闻  ------- 开始---------
 	// 2. 右边list
-	// getJtxwDataList('.jtNews',jtNewsData)
+	getJtxwDataList('.jtNews',jtNewsContentData)
 
-  // 系统动态  基层简讯  一线故事.... 
+// 系统动态  基层简讯  一线故事.... 
 	getBoxDataList('#contentShow',contentData)
 
 </script>
