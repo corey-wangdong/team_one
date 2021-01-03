@@ -78,7 +78,7 @@ h4{width:208px;height:80px;line-height:26px;font-weight:normal;margin-left:10px 
 .fcZi{width:240px; height:100px;margin:20px 0 0 18px;}
 .fcZi a{height:100%!important;line-height:18px!important;font-size:14px;}
 .xcfc01{    width: 1171px;   float: left;  padding-top: 22px;}
-.xcfc_sliderDiv { overflow:hidden; width: 1171px; height:230px !important; margin: auto;} 
+.xcfc_sliderDiv { overflow:hidden; width: 1171px; height:230px !important; margin: auto; padding-bottom: 30px;} 
 .xcfc_sliderDiv img{width:278px;height:185px}
 .xcfc_sliderDiv li{width:278px;height:230px !important;line-height:20px;font-size:14px; text-align:left;margin-right:19px; float:left;}  
 .bx-wrapper{max-width:1171px !important;}
