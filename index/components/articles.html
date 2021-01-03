@@ -50,11 +50,10 @@
 <script type="text/javascript" src="../../otherResource/jqueryPlugin/jquery.vticker-min.js"></script>
 <script src="../utils/mockData.js"></script>
 <script src="../utils/contantMethods.js"></script>
+<script src="../utils/utils.js"></script>
 <script type="text/javascript"> 
 
 function openNews(url){
-    console.log('url--------',url)
-	//window.open("http://www.china-cdt.com:80/dtwz/indexAction.ndo?action=showDoc&"+url+"&"+Math.random());
 	var urlStr=url.split("="); 
     window.open("../components/articles.html?"+urlStr[1]);
 }
@@ -74,7 +73,6 @@ function childNews(url){
 
 //左侧导航栏链接
 function menuNews(url){
-
   let baseUrl = window.location.href.split('/articles.html')[0];
   window.open(baseUrl+'/list.html?'+url)
 }
@@ -231,7 +229,6 @@ div.kjtd_div{display:none;}
 <!--header begin-->
 <div class="ipnews">
 <div class="ipnewsbg">
-    <div class="ipNavL"><h4>新闻中心</h4></div>
     <div class="ipNavM">
     
     <div class="ipNav">
@@ -242,13 +239,7 @@ div.kjtd_div{display:none;}
     		<font color="#ce040c">时政</font>要闻
     	
     </span>
-    <span class="ipNavM02"><a href="http://www.china-cdt.com:80/dtwz/index.jsp">首页</a> -&gt; 
-    
-    	
-    		 <a href="http://www.china-cdt.com:80/dtwz//indexAction.ndo?action=showNewsIndexing&t=index_news&s=index_news">新闻中心</a> -&gt; 
-    		
-    	
-    		
+    <span class="ipNavM02"><a href="http://www.china-cdt.com:80/dtwz/index.jsp">首页</a> -&gt;
     		<h4>时政要闻</h4>
     	
     
@@ -265,11 +256,6 @@ div.kjtd_div{display:none;}
     <div class="ipLtree">
         <div class="ipLtree_ul">
          <ul>
-
-			      <li class="liout" onclick="javascript:menuNews('/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_sjjs')" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a href="#" style="color:#ca0000;font-weight:bold;font-size:16px;">时政要闻</a></li>
-
-			      <li class="liout" onclick="javascript:menuNews('/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_jjgz')" ><a href="#" >国资动态</a></li>
-
           </ul>
         </div>
     </div>
@@ -394,42 +380,45 @@ div.kjtd_div{display:none;}
   var currentHeadDom = createdDom(headData, 'head')
   topHead.html(currentHeadDom);
 
-
-    var menu =
-        [
-            {
-                url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_wzqh',
-                title:'十九届五中全会'
-            },
-            {
-                url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_jjgz',
-                title:'专项整治三年行动'
-            },
-            {
-                url:'/indexAction.ndo?action=showNewsInYearList&t=index_news&s=news_llwy',
-                title:'理论文苑'
-            },
-            {
-                url:'/indexAction.ndo?action=showFirstDoc&t=index_news&s=news_zxgz_gsgg',
-                title:'公示公告'
-            },
-        ]
-
-    var menuShow = $('.ipLtree_ul ul')
-    var str =''
-    for(var i = 0; i < menu.length; i++) {
-        // todo
-        if(false){
-            str += `<li class="liout"  onclick="javascript:menuNews(${menu[i].url})" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a href="#" style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].url}">${menu[i].title}</a></li>`
-        }else{
-            str+=`<li class="liout"  onclick="javascript:menuNews(${menu[i].url})" ><a  data_index="${menu[i].url}">${menu[i].title}</a></li>`
+	var fl = GetQueryString('fl')
+	var firstMenu = headData.filter((v) => {
+		return v.title === fl
+    })
+	var menu = firstMenu[0].childs
+    function renderMenu(menu) {
+        var menuShow = $('.ipLtree_ul ul')
+        var str =''
+        var s = GetQueryString('s')
+        for(let i = 0; i < menu.length; i++) {
+            var s = GetQueryString('s')
+            if(menu[i].secondLevelUrl.indexOf(s)>-1){
+                str += `<li class="liout" style="color: #e30e16; border-right: 3px solid #e52f35;background-color: #fdf2f2;"><a href="#" style="color:#ca0000;font-weight:bold;font-size:16px;" data_index="${menu[i].secondLevelUrl}&fl=${fl}">${menu[i].childDesc}</a></li>`
+            }else{
+                str+=`<li class="liout"><a  data_index="${menu[i].secondLevelUrl}&fl=${fl}">${menu[i].childDesc}</a></li>`
+            }
         }
+        menuShow.html(str)
+        menuShow.click(function(e){
+            console.log(e.target.tagName)
+            if(e.target.tagName.toLowerCase()=='a'){
+                menuNews($(e.target).attr('data_index'))
+            }
+        })
     }
-    menuShow.html(str)
-    menuShow.click(function(e){
-        console.log(e.target.tagName)
-        if(e.target.tagName.toLowerCase()=='a'){
-            menuNews($(e.target).attr('data_index'))
+    renderMenu(menu);
+
+
+    // 初始化链接
+    var ipNavM01 =$('.ipNavM01')
+    var ipNavM02=$('.ipNavM02 h4')
+    var liout = $('.liout a')
+    liout.each((v)=>{
+        if(v==1){
+            let text = liout.eq(v).text()
+            let head =text.substring(0,2)
+            let foot =text.substring(2,text.lenght)
+            ipNavM01.html(`<font color="#ce040c">${head}</font>${foot}`)
+            ipNavM02.html(text)
         }
     })
 </script>
