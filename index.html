@@ -270,29 +270,18 @@ div.kjtd_div{display:none;}
 			</div>
 		<!--集团新闻-->
 			<div class="jtBox" style="height:520px;">
-				<div class="tltBox" style="width:1130px; position:relative;">
-					<div class="tlt_1"><a href="javascript:openMenu('fl=newsCenter&s=news_dtyw')"><font color="#c10000">集团</font><font color="#000">新闻</font></a></div>     	
-					<div class="more"><a href="javascript:openMenu('fl=newsCenter&s=news_dtyw')">更多 &gt;</a></div>
+				<div id='jtxwTitBox' class="tltBox" style="width:1130px; position:relative;"></div>
+				<div class="jtImg">
+					<div id='jtxwImgBox'>
+						<script type="text/javascript">var rotaionArr= new Array();</script>
+						<div id="yx-rotaion" class="yx-rotaion" style="height:435px;">
+							<ul  class="rotaion_list"></ul>
+						</div>
+						<script type="text/javascript" src="./index/js/jquery.yx_rotaion.js"></script>
+					<script type="text/javascript">$(".yx-rotaion").yx_rotaion({auto:true});</script>
+					</div>
+	
 				</div>
-				<div class="jtImg" >
-				<script type="text/javascript">var rotaionArr= new Array();</script>
-				<div id="yx-rotaion" class="yx-rotaion" style="height:435px;">
-					<ul class="rotaion_list">
-						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426';</script>
-						<li><a href="javascript:openWin('action=showDoc&t=&d=C3F32738-CB62-D947-9BED-4AC9CF793426')"><img src="./index/Image/yuantu_202012301421461924160092.jpg" alt="国务院国资委副主任袁野到中国大唐调研指导冬季..."></a></li>
-						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C';</script>
-						<li><a href="javascript:openWin('action=showDoc&t=&d=8918BC57-4BC1-FF18-748B-BD5FDEA36B5C')"><img src="./index/Image/yuantu_20201228173048-568630772.jpg" alt="集团公司传达学习贯彻中央企业负责人会议精神"></a></li>				
-						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4';</script>				
-						<li><a href="javascript:openWin('action=showDoc&t=&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4')"><img src="./index/Image/yuantu_20201230140925-1425370881.jpg" alt="迎新年 谋发展｜集团公司召开老领导老同志座谈..."></a></li>				
-						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A';</script>
-						<li><a href="javascript:openWin('action=showDoc&t=&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A')"><img src="./index/Image/yuantu_20201230140547-444292346.jpg" alt="邹磊会见中交集团党委书记、董事长、总经理王彤..."></a></li>
-						<script type="text/javascript">rotaionArr[rotaionArr.length]= 'action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA';</script>
-						<li><a href="javascript:openWin('action=showDoc&t=&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA')"><img src="./index/Image/yuantu_202012300911101677904464.jpg" alt="集团公司召开冬季保暖和安全保电工作视频会"></a></li>
-
-					</ul>
-				</div>
-				<script type="text/javascript" src="./index/js/jquery.yx_rotaion.js"></script>
-				<script type="text/javascript">$(".yx-rotaion").yx_rotaion({auto:true});</script></div>
 				<div class="jtNews"></div>
 			</div>
 		<!--公示公告-->   
@@ -310,10 +299,16 @@ div.kjtd_div{display:none;}
 	getDataList('#szyw ul',szNewsData,'<span><!--12-30-->&bull;</span>')
 
 // 集团新闻  ------- 开始---------
+	// 获取title
+	getJtxwBannerTitle('#jtxwTitBox',jtNewsContentData)
+	// 1. 左边轮播图
+	getJtxwBannerList('#jtxwImgBox',jtNewsContentData)
+
 	// 2. 右边list
 	getJtxwDataList('.jtNews',jtNewsContentData)
 
-// 系统动态  基层简讯  一线故事.... 
+
+// 系统动态  基层简讯  一线故事.... 	
 	getBoxDataList('#contentShow',contentData)
 
 </script>
