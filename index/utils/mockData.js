@@ -150,8 +150,36 @@ var szNewsData = [
   },
 ]
 
-// 集团新闻  右边list
+// 集团新闻 
 	var jtNewsContentData = {
+    titleContent:{
+      preTitle:'集团',
+      lastTitle:'新闻',
+      linkUrl:'fl=newsCenter&s=news_dtyw'
+    },
+    bannerImgUrlData:[
+      {
+        imgUrl:'./index/Image/yuantu_202012301421461924160092.jpg',
+        alt:'集团公司党组传达学习贯彻中央经济工作会议精神',
+        linkUrl:'fl=newsCenter&s=news_sjjs&d=BA913255-A25A-BFC5-F676-BF7165D6D7CE'
+      },
+      {
+        imgUrl:'./index/Image/yuantu_20201228173048-568630772.jpg',
+        alt:'集团公司召开冬季保暖和安全保电工作视频会',
+        linkUrl:'fl=newsCenter&s=news_sjjs&d=0255842A-8701-6BAD-A67D-B79D7EE7D8FA'
+      },
+      {
+        imgUrl:'./index/Image/yuantu_20201230140925-1425370881.jpg',
+        alt:'邹磊会见中交集团党委书记、董事长、总经理王彤宙',
+        linkUrl:'fl=newsCenter&s=news_sjjs&d=AACFBD24-557C-470E-3A51-DF5BC31B3E7A'
+      },
+      {
+        imgUrl:'./index/Image/yuantu_20201230140547-444292346.jpg',
+        alt:'集团公司召开老领导老同志座谈会',
+        linkUrl:'fl=newsCenter&s=news_sjjs&d=50876F47-E2A1-7C00-75C4-71F9D11A23D4'
+      }
+
+   ],
     jtNewsTitle:'邹磊率队拜访国家能源局局长章建华',
     jtNewsContent:'12月29日，集团公司党组书记、董事长邹磊率队拜访国家能源局党组书记、局长章建华，双方就深化落实能源安全新战略，全力保障国家能源安全，推动能源绿色低碳转型发展进行深入交流……',
     jtNewsUrl:'fl=aboutDT&s=news_sjjs&d=31813797-D510-C7B9-EA94-06EBCA5A11AD',
